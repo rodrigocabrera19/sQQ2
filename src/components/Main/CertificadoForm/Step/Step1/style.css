@@ -1,0 +1,41 @@
+/* STEP1 */
+
+.tipo-fondo{
+    /* display: none; */
+    max-height: 0;
+    overflow-y: hidden;
+    transition: max-height .5s ease-in;
+}
+
+.tipo-fondo-show{
+    max-height: 20rem;
+    overflow:-moz-hidden-unscrollable;
+}
+
+.img-box-upload{
+    border: 3px solid #333;
+}
+.input-box2{
+    display: flex;
+    justify-content: center;
+}
+#input-box1{
+    display: flex;
+    width:100%;
+    flex-wrap:wrap;
+}
+#div-group1{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.V-group{
+    display:flex;
+    flex-wrap:wrap;
+}
+
+#coleccion, #derivado, #sujeto, #reflejo, #variante, #b-intelectual, #b-monetaria, #b-comercial, #version{
+    width:142px;
+}
+#m-alto, #m-ancho, #year, #generacion{
+    width:221px;
+}

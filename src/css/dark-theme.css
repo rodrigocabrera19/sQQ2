@@ -1,0 +1,53 @@
+body{
+
+    --bw: #000;
+    /* --color1: #1b1c1f; */
+    --color1: #19171b;
+    --color2: rgb(19, 19, 21);
+    --color3: #0e0e0e;
+    --color4: #171618bb;
+
+    --transparent-blue: #4e55634d;
+    
+    --transparent-bw: rgba(220, 220, 220, 0.23);
+    --transparent2-bw: rgba(255, 255, 255, 0.05);
+    --transparent3-bw: #4e556326;
+
+    --modal-red: #1d1212e6;
+    
+    --color-bw: #fff;
+
+    --border-input: #ffffff85;
+    
+    --color-bg-transparent: #121113cc;
+    
+    --gray-color: #8D8D8D;
+    --color-grey-disabled: #3d3a40;
+    --green: #00FFB3;
+    --green-transparent: #00ffb340;
+    
+    --turquoise: #00F0FF;
+    --dark-turquoise-transparent: #00575dd6;
+    --turquoise-shadow: rgba(0, 255, 255, .9);
+    --turquoise-transparent: #00F0FF55;
+    --turquoise-transparent2: rgba(0, 255, 255, .75);
+    
+    --violet-shadow: rgba( 159, 96, 182, .9);
+    /* --violet-shadow: rgba( 159, 96, 182, .59); */
+    
+    --orange: #ff4228;
+    --orange-transparent: #ff422840;
+    
+    --yellow: #FEC72E;
+    --yellow2: #FEC72E;
+    --yellow-transparent: #FEC72E50;
+    --yellow-transparent2: #FEC72Edd;
+    
+    --fucsia: #FF0067;
+
+    --required-color: #FF1F00;
+    --required-color-transparent: #ff1e00b0;
+    --required-color-transparent2: #ff1e0050;
+    --required-color-transparent3: #ff1e0005;
+    --required-color-transparent4: #181416bb;
+}

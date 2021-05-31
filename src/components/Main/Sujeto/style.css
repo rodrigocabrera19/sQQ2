@@ -1,0 +1,112 @@
+#primary{
+    width: 85%;
+    margin: auto;
+    background-color: var(--primary-bg-color);
+    padding-top: 12%;
+}
+
+.content{
+    opacity: 0;
+    /* background-color: var(--color4);    */
+    /* background-color: var(--color3);    */
+    animation: fadeIn .3s ease-in forwards;
+    animation-delay: .5s;
+}
+
+
+
+.content-div{
+    margin: 5% auto;
+    width: 90%;
+    padding: 3% 0;
+}
+
+/* SUJETOS */
+
+
+.item{
+    margin: .5rem .5rem;
+    opacity: 0;
+    max-width: 30rem;
+}
+
+.item-anime{
+    
+    animation: fadeUp .5s ease-in forwards;
+    animation-delay: .7s;
+}
+
+
+.item-container{
+    padding: 1.3rem;
+    background: var(--transparent3-bw);
+    border-radius: 1px;
+    border: 1px solid var(--transparent-bw);
+    transform: translateY(0);
+    opacity: 1;
+    transition: .4s;
+}
+
+
+
+.item img{
+    background-color: #090909;
+    padding: .5rem 3rem;
+    min-height: 100%;
+    object-fit: cover;
+}
+
+.item-name{
+    /* color: var(--color-bw); */
+    color: var(--yellow);
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    margin: 1rem 0 .5rem 0;
+    animation: shadowSize 2s ease-in infinite alternate-reverse;
+}
+
+
+
+
+.item .desc div{
+    margin: 1rem 0;
+}
+
+.btn-div{
+    margin: 1.8rem 0 1.5rem 0;
+    display: flex;
+}
+
+.btn-div a{
+    margin-right: auto;
+}
+
+.btn-simple{
+color: var(--turquoise);
+font-size: 1.3rem;
+
+/* opt 2 */
+text-transform: uppercase;
+font-weight: 600;
+font-family: 'Rajdhani', sans-serif;
+letter-spacing: .1rem;
+
+transition: all .1s ease-in;
+}
+
+.btn-simple:hover{
+    text-shadow: 0 0 10px var(--turquoise);
+}
+
+.btn-simple:active{
+    animation: blinkAnimation 6s ease-in-out infinite;
+}
+
+.btn{
+    font-size: 1.6rem;
+    padding: 1rem 2rem;
+    margin: 1rem;
+    font-family: 'Rajdhani', sans-serif;
+}

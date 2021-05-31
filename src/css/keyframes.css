@@ -1,0 +1,426 @@
+@keyframes blinkGreenBackground{
+    0%, 100%{
+        background-color: var(--green-transparent);
+
+    }   
+    0.7%{
+        background-color: transparent;
+    }
+    1.2%{
+        background-color: var(--green-transparent);
+    }   
+    1.5%{
+        background-color: transparent;
+    }
+    2%{
+        background-color: var(--green-transparent);
+    }   
+    4%{
+        background-color: transparent;
+    }
+    4.4%{
+        background-color: var(--green-transparent);
+    }   
+    4.8%{
+        background-color: transparent;
+    }
+    5.2%{
+        background-color: var(--green-transparent);
+    }   
+    5.6%{
+        background-color: transparent;
+    }
+    6%{
+        background-color: var(--green-transparent);
+    }   
+    7%{
+        background-color: transparent;
+    }
+    8%{
+        background-color: var(--green-transparent);
+    }
+
+    24%{
+        background-color: var(--green-transparent);
+    }
+    25%{
+        background-color: transparent;
+    }
+    25.5%{
+        background-color: var(--green-transparent);
+    }
+    26%{
+        background-color: transparent;
+    }
+    27%{
+        background-color: var(--green-transparent);
+    }
+
+
+    37%{
+        background-color: var(--green-transparent);
+    }
+    38%{
+        background-color: transparent;
+    }
+    39%{
+        background-color: var(--green-transparent);
+    }
+    42%{
+        background-color: var(--green-transparent);
+    }
+    43%{
+        background-color: transparent;
+    }
+    44%{
+        background-color: var(--green-transparent);
+    }
+}
+
+
+@keyframes blinkOrangeBackground{
+    0%, 100%{
+        background-color: var(--orange-transparent);
+    }   
+    0.7%{
+        background-color: transparent;
+    }
+    1.2%{
+        background-color: var(--orange-transparent);
+    }   
+    1.5%{
+        background-color: transparent;
+    }
+    2%{
+        background-color: var(--orange-transparent);
+    }   
+    4%{
+        background-color: transparent;
+    }
+    4.4%{
+        background-color: var(--orange-transparent);
+    }   
+    4.8%{
+        background-color: transparent;
+    }
+    5.2%{
+        background-color: var(--orange-transparent);
+    }   
+    5.6%{
+        background-color: transparent;
+    }
+    6%{
+        background-color: var(--orange-transparent);
+    }   
+    7%{
+        background-color: transparent;
+    }
+    8%{
+        background-color: var(--orange-transparent);
+    }
+
+
+    24%{
+        background-color: var(--orange-transparent);
+    }
+    25%{
+        background-color: transparent;
+    }
+    25.5%{
+        background-color: var(--orange-transparent);
+    }
+    26%{
+        background-color: transparent;
+    }
+    27%{
+        background-color: var(--orange-transparent);
+    }
+
+
+    37%{
+        background-color: var(--orange-transparent);
+    }
+    38%{
+        background-color: transparent;
+    }
+    39%{
+        background-color: var(--orange-transparent);
+    }
+    42%{
+        background-color: var(--orange-transparent);
+    }
+    43%{
+        background-color: transparent;
+    }
+    44%{
+        background-color: var(--orange-transparent);
+    }
+
+}
+
+
+/* MENU */
+
+@keyframes down{
+    0%{
+        transform: translateY(-10vh);
+    }
+    100%{
+        transform: translateY(0vh);
+    }
+}
+
+@keyframes translateHeaderBefore{
+    0%{
+        left: -5%;
+    }
+    100%{
+        left: 100%;
+    }
+    
+}
+
+
+
+
+/* CONTENT */
+
+@keyframes shadowSizeGreen3{
+    0%{
+        box-shadow: 0px 0px 2px 0px var(--green);
+    }
+    100%{
+        box-shadow: 0px 0px 4px 0px var(--green);
+    }
+}
+
+
+
+@keyframes shadowSizeGreen2{
+    0%{
+        box-shadow: 0px 0px 3px 0px var(--green);
+    }
+    100%{
+        box-shadow: 0px 0px 10px 0px var(--green);
+    }
+}
+
+
+
+@keyframes size{
+    0%{
+        transform: scale(1) rotate(-45deg);
+    }
+    100%{
+        transform: scale(1.15) rotate(-45deg);
+    }
+}
+
+
+@keyframes rotateRomboIni{
+    0%{
+        opacity: 0;
+        transform: translateX(-5rem) rotate(-45deg);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0) rotate(45deg);
+    }
+}
+
+
+@keyframes shadowSizeGreen{
+    0%{
+        box-shadow: 0px 0px 5px 0px var(--green);
+    }
+    100%{
+        box-shadow: 0px 0px 15px 1px var(--green);
+    }
+}
+
+
+
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+        
+    }
+    100%{
+        opacity: 1;
+        
+    }
+}
+
+
+
+/* SUJETOS */
+
+
+
+@keyframes fadeUp{
+    0%{
+        transform: translateY(3rem);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0rem);
+        opacity: 1;
+    }
+}
+
+
+@keyframes shadowSize{
+    0%{
+        text-shadow: 0 0 8px var(--yellow);
+    }
+
+    100%{
+        text-shadow: 0 0 20px var(--yellow);
+    }
+}
+
+
+@keyframes blinkAnimation{
+    0%, 100%{
+        opacity: 1;
+    }   
+    0.7%{
+        opacity: 0;
+    }
+    1.2%{
+        opacity: 1;
+    }   
+    1.5%{
+        opacity: 0;
+    }
+    2%{
+        opacity: .3;
+    }   
+    4%{
+        opacity: .9;
+    }
+    4.4%{
+        opacity: .4;
+    }   
+    4.8%{
+        opacity: .8;
+    }
+    5.2%{
+        opacity: 0;
+    }   
+    5.6%{
+        opacity: .4;
+    }
+    6%{
+        opacity: 0;
+    }   
+    7%{
+        opacity: .9;
+    }
+    8%{
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+/* CERTIFICADO */
+
+
+
+@keyframes shadowSizing{
+    from{
+        box-shadow: 0 0 4px var(--orange);
+    }
+    to{
+        box-shadow: 0 0 9px 2px var(--orange);
+    }
+}
+
+
+
+/* GUARDADO EXITOSAMENTE */
+
+
+@keyframes h3Big{
+    from{
+        opacity: 0;
+        transform: scale(.6);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+
+@keyframes checkBig{
+    from{
+        opacity: 0;
+        width: 1rem;
+    }
+    to{
+        opacity: 1;
+        width: 7rem;
+    }
+}
+
+
+@keyframes progressCircle {
+    from{
+        stroke-dashoffset: 630;
+    }
+    to{
+        stroke-dashoffset: 0;
+    }
+}
+
+
+
+
+
+/* successfull 2 */
+
+
+@keyframes cyberTry {
+    0%, 100%{
+        opacity: 1;
+    }
+
+    0.2%{
+        opacity: 0;
+    }
+    1.6%{
+        opacity: 1;
+    }
+    2%{
+        opacity: .4;
+    }
+    2.3%{
+        opacity: .8;
+    }
+    2.7%{
+        opacity: .3;
+    }
+    3%{
+        opacity: .7;
+    }
+    3.5%{
+        opacity: 0;
+    }
+    4%{
+        opacity: 1;
+    }
+}
+
+
+
+
+/* REPORTE */
+
+
+
