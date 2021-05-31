@@ -48,22 +48,38 @@ const Step2 = ({updateData}) => {
 
                                 <div class="input-form V-group">
                                     <label for="rvr">RVR</label>
-                                    <input type="number" name="rvr" id="rvr" onChange={handleValor}/>
+                                    <div class="border-corner border-tr">
+                                        <div class="border-bl">
+                                            <input type="number" name="rvr" id="rvr" onChange={handleValor}/>
+                                        </div>
+                                    </div>
                                 </div>
 
                                 <div class="input-form V-group">
                                     <label for="control">Control</label>
-                                    <input type="number" name="control" id="control" onChange={handleValor}/>
+                                    <div class="border-corner border-tr">
+                                        <div class="border-bl">
+                                            <input type="number" name="control" id="control" onChange={handleValor}/>
+                                        </div>
+                                    </div>
                                 </div>
 
                                 <div class="input-form V-group">
                                     <label for="rvr">Seed Eff</label>
-                                    <input type="number" name="seed" id="seed" onChange={handleValor}/>
+                                    <div class="border-corner border-tr">
+                                        <div class="border-bl">
+                                            <input type="number" name="seed" id="seed" onChange={handleValor}/>
+                                        </div>
+                                    </div>
                                 </div>
 
                                 <div class="input-form V-group">
                                     <label for="control">Remision Anual</label>
-                                    <input type="number" name="remision" id="remision" value={valor[0].remision} onChange={handleValor}/>
+                                    <div class="border-corner border-tr">
+                                        <div class="border-bl">
+                                            <input type="number" name="remision" id="remision" value={valor[0].remision} onChange={handleValor}/>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 

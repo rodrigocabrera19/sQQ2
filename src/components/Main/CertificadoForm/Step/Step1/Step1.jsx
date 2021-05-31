@@ -173,37 +173,57 @@ const Step1 = ({updateData}) => {
                             <div  id="div-group1">
                                 <div class="input-form V-group">
                                     <label for="coleccion">Colección</label>
-                                    <input type="number" name="coleccion" id="coleccion" value={referenciaPieza[0].coleccion} onChange={handleRef}/>
+                                    <div class="border-corner border-tr">
+                                        <div class="border-bl">
+                                            <input type="number" name="coleccion" id="coleccion" value={referenciaPieza[0].coleccion} onChange={handleRef}/>
+                                        </div>
+                                    </div>
                                 </div>
 
                                 <div class="input-form V-group">
                                     <label for="sujeto">Sujeto</label>
-                                    <input type="text" name="sujeto" id="sujeto" value={referenciaPieza[0].sujeto} onChange={handleRef}/>
+                                    <div class="border-corner border-tr">
+                                        <div class="border-bl">
+                                            <input type="text" name="sujeto" id="sujeto" value={referenciaPieza[0].sujeto} onChange={handleRef}/>
+                                        </div>
+                                    </div>
                                 </div>
 
                                 <div class="input-form V-group">
                                     <label for="derivado">Derivado</label>
-                                    <input type="text" name="derivado" id="derivado" value={referenciaPieza[0].derivado} onChange={handleRef}/>
+                                    <div class="border-corner border-tr">
+                                        <div class="border-bl">
+                                            <input type="text" name="derivado" id="derivado" value={referenciaPieza[0].derivado} onChange={handleRef}/>
+                                        </div>
+                                    </div>
                                 </div>
 
                                 <div class="input-form V-group">
                                     <label for="variante">Variante</label>
-                                    <input type="text" name="variante" id="variante" value={referenciaPieza[0].variante} onChange={handleRef}/>
+                                    <div class="border-corner border-tr">
+                                        <div class="border-bl">
+                                            <input type="text" name="variante" id="variante" value={referenciaPieza[0].variante} onChange={handleRef}/>
+                                        </div>
+                                    </div>
                                 </div>
 
 
                                 <div class="input-form V-group">
                                     <label for="reflejo">Reflejo</label>
-                                    <input 
-                                        type="number" 
-                                        name="reflejo" 
-                                        id="reflejo" 
-                                        value={referenciaPieza[0].reflejo} 
-                                        onChange={handleRef}
-                                    />
-                                    {
-                                     alertPlaceHolder !== null && <span style={{backgroundColor:"orange", position:"absolute", color:"white", padding:"5px"}}>{alertPlaceHolder}</span>
-                                    }
+                                    <div class="border-corner border-tr">
+                                        <div class="border-bl">
+                                            <input 
+                                                type="number" 
+                                                name="reflejo" 
+                                                id="reflejo" 
+                                                value={referenciaPieza[0].reflejo} 
+                                                onChange={handleRef}
+                                            />
+                                            {
+                                            alertPlaceHolder !== null && <span style={{backgroundColor:"orange", position:"absolute", color:"white", padding:"5px"}}>{alertPlaceHolder}</span>
+                                            }
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
@@ -215,18 +235,30 @@ const Step1 = ({updateData}) => {
                                 <div class="H-group " id="div-group2">
                                     <div class="input-form V-group">
                                         <label for="m-alto">Alto (px)</label>
-                                        <input type="number" name="m-alto" id="m-alto" value={referenciaPieza[0].alto} onChange={handleRef}/>
+                                        <div class="border-corner border-tr">
+                                            <div class="border-bl">
+                                                <input type="number" name="m-alto" id="m-alto" value={referenciaPieza[0].alto} onChange={handleRef}/>
+                                            </div>
+                                        </div>
                                     </div>
 
                                     <div class="input-form V-group">
                                         <label for="m-ancho">Ancho (px)</label>
-                                        <input type="number" name="m-ancho" id="m-ancho" value={referenciaPieza[0].ancho} onChange={handleRef}/>
+                                        <div class="border-corner border-tr">
+                                            <div class="border-bl">
+                                                <input type="number" name="m-ancho" id="m-ancho" value={referenciaPieza[0].ancho} onChange={handleRef}/>
+                                            </div>
+                                        </div>
                                     </div>
 
                                     <div class="input-form V-group" id="peso">
                                     
                                         <label for="weight">Peso (bytes)</label>
-                                        <input type="number" name="weight" id="weight" value={referenciaPieza[0].peso} onChange={handleRef}/>
+                                        <div class="border-corner border-tr">
+                                            <div class="border-bl">
+                                                <input type="number" name="weight" id="weight" value={referenciaPieza[0].peso} onChange={handleRef}/>
+                                            </div>
+                                        </div>
                                     </div>
 
                                 </div>
@@ -238,12 +270,20 @@ const Step1 = ({updateData}) => {
                                     
                                     <div class="input-form V-group">
                                         <label for="year">Año</label>
-                                        <input type="number" name="year" id="year" value={referenciaPieza[0].año} onChange={handleRef}/>
+                                        <div class="border-corner border-tr">
+                                            <div class="border-bl">
+                                                <input type="number" name="year" id="year" value={referenciaPieza[0].año} onChange={handleRef}/>
+                                            </div>
+                                        </div>
                                     </div>
                                     
                                     <div class="input-form V-group">
                                         <label for="generacion">Generación</label>
-                                        <input type="number" name="generacion" id="generacion" value={referenciaPieza[0].generacion} onChange={handleRef}/>
+                                        <div class="border-corner border-tr">
+                                            <div class="border-bl">
+                                                <input type="number" name="generacion" id="generacion" value={referenciaPieza[0].generacion} onChange={handleRef}/>
+                                            </div>
+                                        </div>
                                     </div>
 
                                     
@@ -257,22 +297,38 @@ const Step1 = ({updateData}) => {
 
                                         <div class="input-form V-group">
                                             <label for="b-intelectual">Intelectual</label>
-                                            <input type="number" name="b-intelectual" id="b-intelectual" value={referenciaPieza[0].intelectual} onChange={handleRef}/>
+                                            <div class="border-corner border-tr">
+                                                <div class="border-bl">
+                                                    <input type="number" name="b-intelectual" id="b-intelectual" value={referenciaPieza[0].intelectual} onChange={handleRef}/>
+                                                </div>
+                                            </div>
                                         </div>
 
                                         <div class="input-form V-group">
                                             <label for="b-monetaria">Monetaria</label>
-                                            <input type="number" name="b-monetaria" id="b-monetaria" value={referenciaPieza[0].monetaria} onChange={handleRef}/>
+                                            <div class="border-corner border-tr">
+                                                <div class="border-bl">
+                                                    <input type="number" name="b-monetaria" id="b-monetaria" value={referenciaPieza[0].monetaria} onChange={handleRef}/>
+                                                </div>
+                                            </div>
                                         </div>
 
                                         <div class="input-form V-group">
                                             <label for="b-comercial">Comercial</label>
-                                            <input type="number" name="b-comercial" id="b-comercial" value={referenciaPieza[0].comercial} onChange={handleRef}/>
+                                            <div class="border-corner border-tr">
+                                                <div class="border-bl">
+                                                    <input type="number" name="b-comercial" id="b-comercial" value={referenciaPieza[0].comercial} onChange={handleRef}/>
+                                                </div>
+                                            </div>
                                         </div>
 
                                         <div class="input-form V-group">
                                             <label for="b-comercial">Versión</label>
-                                            <input type="number" name="version" id="version" value={referenciaPieza[0].version} onChange={handleRef}/>
+                                            <div class="border-corner border-tr">
+                                                <div class="border-bl">
+                                                    <input type="number" name="version" id="version" value={referenciaPieza[0].version} onChange={handleRef}/>
+                                                </div>
+                                            </div>
                                         </div>
 
                                     </div>

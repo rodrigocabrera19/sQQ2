@@ -62,18 +62,30 @@ const Step3 = ({updateData}) => {
                                 
                                 <div class="input-form V-group">
                                     <label for="m-alto">Nombre</label>
-                                    <input type="text" name="m-alto" id="creatorName" value={creatorData[0].creador.nombre} onChange={handleCreador}/>
+                                    <div class="border-corner border-tr">
+                                        <div class="border-bl">
+                                            <input type="text" name="m-alto" id="creatorName" value={creatorData[0].creador.nombre} onChange={handleCreador}/>
+                                        </div>
+                                    </div>
                                 </div>
 
                                 <div class="input-form V-group">
                                     <label for="m-ancho">Apellido</label>
-                                    <input type="text" name="m-ancho" id="creatorAp" value={creatorData[0].creador.apellido} onChange={handleCreador}/>
+                                    <div class="border-corner border-tr">
+                                        <div class="border-bl">
+                                            <input type="text" name="m-ancho" id="creatorAp" value={creatorData[0].creador.apellido} onChange={handleCreador}/>
+                                        </div>
+                                    </div>
                                 </div>
 
                                 <div class="input-form V-group" >
                                 
                                     <label for="weight">Año de nacimiento</label>
-                                    <input type="number" name="weight" id="creatorAño" value={creatorData[0].creador.año} onChange={handleCreador}/>
+                                    <div class="border-corner border-tr">
+                                        <div class="border-bl">
+                                            <input type="number" name="weight" id="creatorAño" value={creatorData[0].creador.año} onChange={handleCreador}/>
+                                        </div>
+                                    </div>
                                 </div>
 
                             </div>
@@ -84,12 +96,20 @@ const Step3 = ({updateData}) => {
                                 <h4 class="form-title2">Dueño de la pieza</h4>
                                 <div class="input-form V-group">
                                     <label for="m-alto">Nombre</label>
-                                    <input type="text" name="m-alto" id="dueñoName" value={creatorData[0].dueño.nombre} onChange={handleCreador}/>
+                                    <div class="border-corner border-tr">
+                                        <div class="border-bl">
+                                            <input type="text" name="m-alto" id="dueñoName" value={creatorData[0].dueño.nombre} onChange={handleCreador}/>
+                                        </div>
+                                    </div>
                                 </div>
 
                                 <div class="input-form V-group">
                                     <label for="m-ancho">Apellido</label>
-                                    <input type="text" name="m-ancho" id="dueñoAp" value={creatorData[0].dueño.apellido} onChange={handleCreador}/>
+                                    <div class="border-corner border-tr">
+                                        <div class="border-bl">
+                                            <input type="text" name="m-ancho" id="dueñoAp" value={creatorData[0].dueño.apellido} onChange={handleCreador}/>
+                                        </div>
+                                    </div>
                                 </div>
 
                             </div>
