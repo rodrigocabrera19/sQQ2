@@ -3,7 +3,7 @@ import './style.css'
 
 const FormBreadcrumb = () => {
     return (
-        <Fragment class="content">
+        <Fragment>
             <ul class="form-breadcrumb">
                 <li class="step-li1 breadcrumb-active">Pieza</li>
                 <li class="step-li2">Valor</li>

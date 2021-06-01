@@ -56,10 +56,10 @@
 
 
 .form-breadcrumb .breadcrumb-active{
-    color: var(--orange-y);
+    color: #FFA700;
 }
 
 .form-breadcrumb .breadcrumb-active::before{
-    background-color: var(--orange-y);
+    background-color: #FFA700;
     animation: shadowSizing 1s ease-in infinite alternate-reverse;
 }

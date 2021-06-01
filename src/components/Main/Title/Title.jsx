@@ -66,7 +66,6 @@ const Title = ({seccion, display}) => {
                 
                 <div class="divBox2 H-group">
                     <h2 class="title">{seccion}</h2>
-                    <Rombo display="none"/>
                 </div>
                 <Search display={display}/>
             </div>

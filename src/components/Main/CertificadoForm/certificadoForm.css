@@ -219,19 +219,7 @@
 
 
 
-/* STEP1 */
 
-.tipo-fondo{
-    /* display: none; */
-    max-height: 0;
-    overflow-y: hidden;
-    transition: max-height .5s ease-in;
-}
-
-.tipo-fondo-show{
-    max-height: 20rem;
-    overflow:-moz-hidden-unscrollable;
-}
 
 /*input div*/
 
@@ -303,7 +291,11 @@
     flex-wrap: wrap;
 }
 
-
+.V-group{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
 
 .flex1{
     flex: 1;

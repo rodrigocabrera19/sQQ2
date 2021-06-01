@@ -1,29 +1,33 @@
 .title-section{
     width: 90%;
     margin: auto;
+       
 }
 
 .divBox1{
     justify-content: space-between;
+    width:100%;
 }
-
+.divBox2{
+    width:100%;
+}
 
 .form .divBox1{
     justify-content: center;
+    
+    
 }
 
 .title-section .divBox2{
     justify-content: flex-start;
-    align-items: center;
+    width:100%;
 }
 
 .title-box{
     position: relative;
 }
-
 .title{
     color: var(--color-bw);
-    text-align: center;
     font-family: 'Mohave', sans-serif;
     font-weight: 300;
     /* transform: translateX(50%); */

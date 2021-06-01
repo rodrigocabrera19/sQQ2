@@ -170,7 +170,7 @@ const Step1 = ({updateData}) => {
 
                         <div class="input-box V-group" id="input-box1">
 
-                            <div  id="div-group1">
+                            <div class="H-group" id="div-group1">
                                 <div class="input-form V-group">
                                     <label for="coleccion">Colección</label>
                                     <div class="border-corner border-tr">
@@ -219,11 +219,12 @@ const Step1 = ({updateData}) => {
                                                 value={referenciaPieza[0].reflejo} 
                                                 onChange={handleRef}
                                             />
-                                            {
-                                            alertPlaceHolder !== null && <span style={{backgroundColor:"orange", position:"absolute", color:"white", padding:"5px"}}>{alertPlaceHolder}</span>
-                                            }
+                                            
                                         </div>
                                     </div>
+                                        {
+                                            alertPlaceHolder !== null && <span className="span-alert" style={{backgroundColor:"#FFA700", position:"absolute", color:"white", padding:"5px"}}>{alertPlaceHolder}</span>
+                                        }
                                 </div>
                             </div>
 

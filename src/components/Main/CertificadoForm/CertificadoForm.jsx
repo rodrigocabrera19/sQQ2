@@ -42,7 +42,7 @@ const CertificadoForm = ({menuAbierto, activeMenu}) => {
        }
     }
 
-        useEffect(() => {
+    useEffect(() => {
             //FORM BOTONES + INPUTS 
     
             const nxtBtn1 = document.querySelector('.next-btn-step1');
@@ -139,20 +139,23 @@ const CertificadoForm = ({menuAbierto, activeMenu}) => {
     return (
         <Fragment>
             <main id="primary" onClick={cerrarMenu}>
+                
+                        <Title seccion="Certificado" display="none"/>
+                        <FormBreadcrumb/>
+                        <form class="div-form">
+                            {/*Se le pasa la función updateData al componente 'Step1' para que envíe la información sobre referencia de la pieza ingresada en los inputs. */}
+                            <Step1 updateData={updateData} />
 
-                <Title seccion="Certificado" display="none"/>
-                <FormBreadcrumb/>
-                <form class="div-form">
-                    <Step1 updateData={updateData} />
-                    <Step2 updateData={updateData}/>
+                            {/*Se le pasa la función updateData al componente 'Step2' para que envíe la información sobre el valor de la pieza ingresada en los inputs. */}
+                            <Step2 updateData={updateData}/>
 
-                    {/*Se le pasa la función al componente 'Step3' para que envíe la información proporcionada por el usuario. */}
-                    <Step3 updateData={updateData}/>
+                            {/*Se le pasa la función updateData al componente 'Step3' para que envíe la información sobre el creador de la pieza ingresada en los inputs. */}
+                            <Step3 updateData={updateData}/>
 
-                    {/*Se le pasa el estado con la información del 'creatorData' al componente 'Step4' para que la muestre en el preview. */}
-                    <Step4 creatorData={creatorData} valor={valor} referenciaPieza={referenciaPieza} image={image}/>
-                </form>
-
+                            {/*Se le pasa el estado con la información del 'creatorData' al componente 'Step4' para que la muestre en el preview. */}
+                            <Step4 creatorData={creatorData} valor={valor} referenciaPieza={referenciaPieza} image={image}/>
+                        </form>
+                   
             </main>
 
 

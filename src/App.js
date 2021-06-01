@@ -1,4 +1,4 @@
-import './css/base2.css'
+import './css/base.css'
 import './css/dark-theme.css'
 import './css/keyframes.css'
 import './css/tipografias.css'
@@ -22,7 +22,7 @@ function App() {
   return (
     <div className="App">
       <NavBar menuAbierto={menuAbierto} activeMenu={activeMenu}/>
-      <CertificadoForm menuAbierto={menuAbierto} activeMenu={activeMenu}/>
+      <AddSujetos menuAbierto={menuAbierto} activeMenu={activeMenu}/>
     </div>
   );
 }
