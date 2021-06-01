@@ -110,11 +110,11 @@ const AddSujetos = ({menuAbierto, activeMenu}) => {
         <Fragment>
             <main id="primary" onClick={cerrarMenu}>
 
-                <Title />
+                <Title seccion="Sujetos" display="none"/>
 
                 <section class="content">
 
-                    
+                    <h4 class="form-title2">AÑADIR NUEVO SUJETO</h4>
 
                     <div class="content-div">
                             
@@ -133,15 +133,19 @@ const AddSujetos = ({menuAbierto, activeMenu}) => {
                                                 <label for="coleccion">
                                                     Colección<span class="required">*</span>
                                                 </label>
-                                                <div class="yellow-hover"><input type="text" name="coleccion" id="coleccion" required/></div>
+                                                <div class="border-corner border-tr">
+                                                    <div class="border-bl"><input type="text" name="coleccion"  required/></div>
+                                                </div>
                                             </div>
                     
                                             <div class="input-form V-group flex1">
                                                 <label for="sujeto">
                                                     Sujeto<span class="required">*</span>
                                                 </label>
-                                                <div class="yellow-hover">
-                                                    <input type="text" name="sujeto" id="sujeto" required/>
+                                                <div class="border-corner border-tr">
+                                                    <div class="border-bl">
+                                                        <input type="text" name="sujeto"  required/>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -149,16 +153,20 @@ const AddSujetos = ({menuAbierto, activeMenu}) => {
                                         <div class="H-group input-box">
                                         <div class="input-form V-group flex1">
                                                 <label for="alto">
-                                                    Alto<span class="required">*</span>
+                                                    Alto (px)<span class="required">*</span>
                                                 </label>
-                                                <div class="yellow-hover"><input type="number" name="alto" id="alto" required/></div>
+                                                <div class="border-corner border-tr">
+                                                    <div class="border-bl"><input type="number" name="alto" id="alto" required/></div>
+                                                </div>
                                             </div>
                     
                                             <div class="input-form V-group flex1">
                                                 <label for="ancho">
-                                                    Ancho<span class="required">*</span>
+                                                    Ancho (px)<span class="required">*</span>
                                                 </label>
-                                                <div class="yellow-hover"><input type="number" name="ancho" id="ancho" required/></div>
+                                                <div class="border-corner border-tr">
+                                                    <div class="border-bl"><input type="number" name="ancho" id="ancho" required/></div>
+                                                </div>
                                             </div>
                 
                                         </div>
@@ -168,19 +176,40 @@ const AddSujetos = ({menuAbierto, activeMenu}) => {
                                                 <label for="url">
                                                     URL Alternativa
                                                 </label>
-                                                <div class="yellow-hover"><input type="url" placeholder="https://example.com" name="url" id="url"/></div>
+                                                <div class="border-corner border-tr">
+                                                    <div class="border-bl"><input type="url" placeholder="https://example.com" name="url" id="url"/></div>
+                                                </div>
                                             </div>
                                         </div>
                 
-                                        <div class="input-box">
+                                        <div id="input-box-valor">
+
                                             <div class="input-form V-group">
+                                                <label for="Valor">
+                                                    Moneda
+                                                </label>
+                                                <div class="border-corner border-tr">
+                                                    <div class="border-bl">
+                                                        <select class="monedas">
+                                                            <option value="CHF">CHF</option>
+                                                            <option value="EUR">EUR</option>
+                                                            <option value="USD">USD</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="input-form V-group" id="valor">
                                                 <label for="Valor">
                                                     Valor<span class="required">*</span>
                                                 </label>
-                                                <div class="yellow-hover">
-                                                    <input type="number" name="valor" id="valor" required/>
+                                                <div class="border-corner border-tr">
+                                                    <div class="border-bl">
+                                                        <input type="number" name="valor" id="valor" required/>
+                                                    </div>
                                                 </div>
                                             </div>
+                                            
                                         </div>
                 
                 
@@ -190,7 +219,9 @@ const AddSujetos = ({menuAbierto, activeMenu}) => {
                                                 <label for="txt-curatorial">
                                                     Texto Curatorial
                                                 </label>
-                                                <div class="yellow-hover"><textarea type="text" name="txt-curatorial" id="txt-curatorial"></textarea></div>
+                                                <div class="border-corner border-tr">
+                                                    <div class="border-bl"><textarea type="text" name="txt-curatorial" id="txt-curatorial"></textarea></div>
+                                                </div>
                                             </div>
                                         </div>
                 
@@ -199,8 +230,10 @@ const AddSujetos = ({menuAbierto, activeMenu}) => {
                                                 <label for="txt-periodistico">
                                                     Texto Periodístico
                                                 </label>
-                                                <div class="yellow-hover">
-                                                    <textarea type="text" name="txt-periodistico" id="txt-periodistico"></textarea>
+                                                <div class="border-corner border-tr">
+                                                    <div class="border-bl">
+                                                        <textarea type="text" name="txt-periodistico" id="txt-periodistico"></textarea>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -211,8 +244,10 @@ const AddSujetos = ({menuAbierto, activeMenu}) => {
                                                 <label for="r-historica">
                                                     Reseña Histórica
                                                 </label>
-                                                <div class="yellow-hover">
-                                                    <textarea type="text" name="r-historica" id="r-historica"></textarea>
+                                                <div class="border-corner border-tr">
+                                                    <div class="border-bl">
+                                                        <textarea type="text" name="r-historica" id="r-historica"></textarea>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>

@@ -271,7 +271,7 @@
         text-transform: uppercase;
         font-weight: 400;
         text-shadow: 0px 0px 15px var(--turquoise-transparent);
-    
+        text-align:center;
         width: 100%;
 
 }

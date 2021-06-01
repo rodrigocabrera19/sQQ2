@@ -110,3 +110,21 @@ transition: all .1s ease-in;
     margin: 1rem;
     font-family: 'Rajdhani', sans-serif;
 }
+
+#input-box-valor{
+    display:grid;
+    grid-template-rows:1fr;
+    grid-template-columns:20% 75%;
+    grid-column-gap:2.5%;
+}
+
+.monedas{
+    width:100%;
+    height:4rem;
+    background-color:var(--transparent2-bw);
+    color: var(--color-bw);
+    border: 1px solid var(--transparent-bw);
+}
+option{
+    color:black;
+}
