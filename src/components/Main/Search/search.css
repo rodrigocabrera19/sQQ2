@@ -5,6 +5,8 @@
     padding: 0;
     transition: .4s;
     height: 3rem;
+    align-self: center;
+    
 }
 
 .searchinput-show, .searchinput2{
@@ -12,34 +14,31 @@
     width: 20rem;
     overflow: visible;
     padding: 0 1rem;
-    animation: shadowSizeGreen3 2s ease-in alternate-reverse infinite;
+    animation: shadowSizeGreen2 2s ease-in alternate-reverse infinite;
+    align-items: center;
 }
 
 
 .searchbar{
-    align-items: center;
+    display:flex;
+
+    
 }
 
-.btn-search{
+.searchIcon, .añadirIcon, .deleteIcon{
     cursor: pointer;
-    margin-left: 1rem;
+
+}
+.searchIcon, .detetIcon, añadirIcon{
+    align-self:center;
 }
 
 
 .btn-opacity{
-    opacity: .2;
+    opacity: .3; 
+    
 }
 
-
-
-.search-icon{
-    width: 2rem;
-    height: 2rem;
-    border-radius: 100%;
-    border: 3px solid var(--green);
-    animation: shadowSizeGreen2 2s ease-in alternate-reverse infinite;
-    background: transparent;
-}
 
 .search-icon span{
     content: "";
@@ -50,7 +49,16 @@
     border-radius: 4rem;
     position: relative;
     top: 1.4rem;
-    left: 1.1rem;
     transform: rotate(45deg);
     animation: shadowSizeGreen2 2s ease-in alternate-reverse infinite;
+    
 }
+
+.searchIcon{
+    display:flex;
+    align-items:center;
+}
+
+
+
+

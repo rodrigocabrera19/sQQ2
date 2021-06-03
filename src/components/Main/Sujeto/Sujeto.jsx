@@ -1,10 +1,11 @@
 import React, {useState, useEffect, Fragment} from 'react';
-import './style.css'
-
-import alucard from '../../../image/alucard.jpg';
+import './sujetos.css';
 import Title from '../Title/Title'
 
-const Content = ({menuAbierto, activeMenu}) => {
+import alucard from '../../../image/alucard.jpg';
+
+const Sujeto = ({menuAbierto, activeMenu}) => {
+
     //Al presionar la tecla 'esc' cierrar el menú.
     window.onkeydown = (e)=>{
         if(e.keyCode === 27){
@@ -15,7 +16,7 @@ const Content = ({menuAbierto, activeMenu}) => {
             activeMenu(false)
         }
       };
-
+    
     //función para cerrar el menú al hacer click en cualquier parte del body.
     const cerrarMenu = () => {
         if(menuAbierto){
@@ -37,18 +38,18 @@ const Content = ({menuAbierto, activeMenu}) => {
     }, [])
 
 
-const [sujeto, setSujeto] = useState(['sujeto1', 'sujeto2', 'sujeto3', 'sujeto4', 'sujeto5', 'sujeto6'])
+    const [sujetos, setSujetos] = useState(['sujeto1', 'sujeto2', 'sujeto3', 'sujeto4', 'sujeto5', 'sujeto6'])
 
-const eliminarSujeto = (value) => {
-       const newArray = sujeto.filter(s => s !== value);
-       setSujeto(newArray);
-   }
+   
+    const eliminarSujeto = (value) => {
+        const newArray = sujetos.filter(s => s !== value);
+        setSujetos(newArray);
+    };
     
-    const sujetos = sujeto.map((value)=> {
+    const sujetosItems = sujetos.map((value)=> {
         return(
-        <div class="content w-full">
-            <div class="item w-full flex flex-col">
-                        <div class="item-container">
+            <div class="item">
+                    <div class="item-container">
                             <img src={alucard} alt=""/>
                             <h4 class="item-name">{value}</h4>
                             <div class="desc">
@@ -59,36 +60,33 @@ const eliminarSujeto = (value) => {
                                         <span class="width">20300</span>
                                     </p>
                                 </div>
-                                <div class="H-group">
-                                    <h6 class="gray-color">Fecha de creación: <span>&nbsp;</span></h6>
-                                    <p>May 16, 2020</p>
-                                </div>
+                                
                             </div>
-                            <div class="btn-div flex justify-around">
+                            <div class="btn-div">
                                 <a href="#" class="btn-simple">Editar</a>
-                                <a href="#" class="btn-simple lg:mx-3">Ver</a>
-                                <a href="#" class="btn-simple" onClick={() => eliminarSujeto(value)}>Eliminar</a>
+                                <button class="btn-simple" onClick={() => eliminarSujeto(value)}>Eliminar</button>
                             </div>
                         </div>
-                    </div>
                 </div>
-                )
-        })
-   
+        ) 
+    });
+      
    
 
     return (
-        <Fragment>
-            <main id="primary" onClick={cerrarMenu}>
-                <Title seccion="Sujetos" menuAbierto={menuAbierto} activeMenu={activeMenu}/>
-                <div className=" mt-10 div-container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 lg:grid-cols-6 gap-3" onClick={cerrarMenu}>
+        <main id="primary" onClick={cerrarMenu}>
+            <Title seccion="Sujetos" Display="" />
                 
-                    {sujetos}
+            <section class="content">
+                <div class="content-div grid-col4">
+                    {sujetosItems}                    
                 </div>
-            </main>
-        </Fragment>
+            </section>
+
+            
+        </main>
         
     )
 }
 
-export default Content
+export default Sujeto

@@ -17,7 +17,7 @@ const Title = ({seccion, display}) => {
                 titleBox.classList.add('title-box');
                 // document.querySelector('.title-section .divBox2').appendChild(titleBox);
             
-                let sectionTitle = document.querySelector('.title-section .divBox2');
+                let sectionTitle = document.querySelector('.title-section .divBox22');
             
                 sectionTitle.insertBefore(titleBox, sectionTitle.childNodes[0]);
             
@@ -62,12 +62,14 @@ const Title = ({seccion, display}) => {
 
     return (
         <section class="title-section ">
-            <div class="divBox1 H-group V-group-media-title">
+            <div class="divBox11 H-group V-group-media-title">
                 
-                <div class="divBox2 H-group">
+                <div class="divBox22 H-group">
                     <h2 class="title">{seccion}</h2>
+                    
                 </div>
                 <Search display={display}/>
+                
             </div>
             
 

@@ -1,6 +1,6 @@
 import React, {useEffect, Fragment} from 'react';
 import Search from '../Search/Search'
-import './style.css';
+import './addSujetos.css';
 import Title from '../Title/Title.jsx'
 
 const AddSujetos = ({menuAbierto, activeMenu}) => {
