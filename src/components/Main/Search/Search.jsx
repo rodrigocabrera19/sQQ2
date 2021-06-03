@@ -3,7 +3,7 @@ import './search.css';
 
 
 
-const Search = ({menuAbierto, activeMenu, display}) => {
+const Search = ({menuAbierto, activeMenu, setingDisplay, verificarSeleccionados}) => {
 
 //Función que despliega el input del buscador.
     const animateSearch = () => {
@@ -17,6 +17,7 @@ const Search = ({menuAbierto, activeMenu, display}) => {
         deleteIcon.classList.toggle('deleteIcon2');
         añadirIcon.classList.toggle('añadirIcon2');
 
+        setingDisplay('none');
     }
 
      const cerrarMenu = () => {
@@ -31,7 +32,7 @@ const Search = ({menuAbierto, activeMenu, display}) => {
     
    
     return (
-            <div class="searchbar H-group" >
+            <div class="searchbar H-group" onClick={cerrarMenu}>
                 
                 <div class="añadirIcon ">
                     <span className="search">

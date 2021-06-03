@@ -1,13 +1,13 @@
 .title-section{
     width: 90%;
     margin: auto;
-       
 }
 
 
 .title-section .divBox2{
     justify-content: flex-start;
     width:100%;
+    
 }
 
 .title-box{
@@ -60,4 +60,29 @@
 
 .form .subtitle{
     display: none;
+}
+
+
+.btn-actions{
+    display: flex;
+}
+
+.btn-actions button{
+    margin-right: auto;
+}
+
+
+
+.btn-simple:active{
+    animation: blinkAnimation 6s ease-in-out infinite;
+}
+
+.btn-delete, .btn-cancelar{
+    font-size: 1.3rem;
+    padding: 1rem 2rem;
+    margin-left:.5rem;
+    font-family: 'Rajdhani', sans-serif;
+}
+.btn-cancelar{
+    margin-right:.5rem;
 }

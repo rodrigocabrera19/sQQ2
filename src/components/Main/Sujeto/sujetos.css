@@ -283,6 +283,7 @@ span.fade{
     margin: .5rem .5rem;
     opacity: 0;
     max-width: 30rem;
+    cursor: pointer;
 }
 
 .item-anime{
@@ -357,4 +358,8 @@ transition: all .1s ease-in;
 
 .btn-simple:active{
     animation: blinkAnimation 6s ease-in-out infinite;
+}
+
+.item-sujeto{
+    background-color:#F55018;
 }

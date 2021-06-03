@@ -1,9 +1,9 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import './title.css';
 import Rombo from '../Rombo/Rombo'
 import Search from '../Search/Search'
 
-const Title = ({seccion, display}) => {
+const Title = ({seccion, displayBtn, verificarSeleccionados}) => {
 
     useEffect(() => {
         const glitchTitle = document.querySelector('.title');
@@ -60,15 +60,24 @@ const Title = ({seccion, display}) => {
         }, 4000);
     }, [])
 
+    const [setDisplayBtn, setSetDisplayBtn] = useState('');
+    const setingDisplay = (display) => {
+        setDisplayBtn === 'none' ? setSetDisplayBtn('') : setSetDisplayBtn(display); 
+        
+    }
+
     return (
         <section class="title-section ">
             <div class="divBox11 H-group V-group-media-title">
                 
                 <div class="divBox22 H-group">
                     <h2 class="title">{seccion}</h2>
-                    
                 </div>
-                <Search display={display}/>
+                <div className="btn-actions" style={{display:setDisplayBtn.length === 0 ? displayBtn : setDisplayBtn}}>
+                    <button class="prev-btn reset-form btn-cancelar">CANCELAR</button>
+                    <button class="prev-btn reset-form btn-delete">ELIMINAR SELECCIONADOS</button>
+                </div>
+                <Search setingDisplay={setingDisplay} />
                 
             </div>
             

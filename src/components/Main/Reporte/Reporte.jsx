@@ -108,6 +108,98 @@ const Reporte = ({menuAbierto, activeMenu}) => {
             stepLi4.classList.remove('breadcrumb-active');
             });
         }
+
+        // INPUTS RADIO AND CHECKBOX PARENT SHADOW
+
+  let radioInput = document.querySelectorAll('[type=radio]');
+  let checkboxInput = document.querySelectorAll('[type=checkbox]');
+
+ radioInput.forEach( (item)=>{
+   let parentItem = item.parentItem;
+
+   if(item === 'checked'){
+     item.style.color = "red";
+   }
+
+ })
+
+
+
+
+
+ //REPORTE 
+
+
+
+
+
+let tipoInstrumento = document.querySelectorAll('.tipoInstrumento');
+
+tipoInstrumento.forEach( (tInst)=>{
+
+  tInst.addEventListener('click', ()=>{
+
+    let x1 = document.querySelector('#rFinanciero')
+    let x2 = document.querySelector('#rContable')
+    let x3 = document.querySelector('#rComercial')
+
+    if(x1.checked){
+      
+      document.querySelector('.tipo-fondo').classList.add('tipo-fondo-show')
+      let tFondoShow = document.querySelector('.tipo-fondo-show');
+      let tipoFondo = document.querySelectorAll('.tipo-fondo input');
+
+    
+      if(tFondoShow){
+
+            function isChecked() {
+                      for (let i = 0; i < tipoFondo.length; i++) {
+                          if (tipoFondo[i].checked) 
+                          // return true;
+                          document.querySelector('.next-btn-step1').style.display = "block"
+
+                      }
+              
+                      return false;
+                      
+                  }
+
+                  isChecked();
+
+            
+      }
+
+
+      tipoFondo.forEach((tFondo)=>{
+
+        tFondo.addEventListener('click', ()=>{
+          let btn = document.querySelector('.next-btn-step1');
+          // let x1 = document.querySelector('#rFinanciero')
+
+
+
+        if(tFondo.checked){
+          console.log('you select at least one ! :D');
+          btn.style.display = "block"
+
+        }
+        })
+
+          })
+
+    }
+
+  })
+
+});
+
+const itemReport = document.querySelectorAll('.item-report');
+
+itemReport.forEach((item) =>{
+  item.addEventListener('click', function(e){
+    item.classList.toggle('selected-item');
+  });
+});
     }, [])
 
 
@@ -126,7 +218,7 @@ useEffect(() => {
 
 //Estado que guarda true o false según si el usuario seleccionó o no una carta. El mismo sirve para permitir el acceso o no a la sección 'selecionado'.
 const [selectedActive, setSelectedActive] = useState(null);
-//Función para verificar si el usuario seleccionó una carta en la sección 'choose .De ser así, se le permite acceder al apartado 'seleccionado'.
+//Función para verificar si el usuario seleccionó una carta en la sección 'choose' .De ser así, se le permite acceder al apartado 'seleccionado'.
 const selected = () => {
     const itemReport = document.querySelectorAll('.item-report');
     const item = [];

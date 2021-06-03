@@ -42,13 +42,36 @@ const Sujeto = ({menuAbierto, activeMenu}) => {
 
    
     const eliminarSujeto = (value) => {
-        const newArray = sujetos.filter(s => s !== value);
+        const newArray = sujetos.filter(sujeto => sujeto !== value);
         setSujetos(newArray);
+        const ArraySujetos = document.querySelectorAll('.item')
+        const newArraySujetos = [...ArraySujetos]
+        setDisplayBtn(newArraySujetos.some((e) => e.classList.contains('item-sujeto')) ? '' : 'none')
+        
     };
+    
+    
+    const [displayBtn, setDisplayBtn] = useState('none')
+
+    const sujeteSelected = (value) => {
+        if(value !== null){
+            const itemSujeto = document.getElementById(value);
+            if(itemSujeto.classList.contains('item-sujeto')){
+                itemSujeto.classList.remove('item-sujeto');
+            }else{
+                itemSujeto.classList.add('item-sujeto')
+            }
+            const sujetos = document.querySelectorAll('.item')
+            const newArraySujetos = [...sujetos]
+            setDisplayBtn(newArraySujetos.some((e) => e.classList.contains('item-sujeto')) ? '' : 'none')
+        }else{
+            return;
+        }
+    }
     
     const sujetosItems = sujetos.map((value)=> {
         return(
-            <div class="item">
+            <div class="item" id={value} onClick={() => sujeteSelected(value)}>
                     <div class="item-container">
                             <img src={alucard} alt=""/>
                             <h4 class="item-name">{value}</h4>
@@ -64,7 +87,13 @@ const Sujeto = ({menuAbierto, activeMenu}) => {
                             </div>
                             <div class="btn-div">
                                 <a href="#" class="btn-simple">Editar</a>
-                                <button class="btn-simple" onClick={() => eliminarSujeto(value)}>Eliminar</button>
+                                <button 
+                                    class="btn-simple" 
+                                    onClick={() => {
+                                        eliminarSujeto(value);
+                                        sujeteSelected(null);
+                                    }}
+                                >Eliminar</button>
                             </div>
                         </div>
                 </div>
@@ -72,10 +101,11 @@ const Sujeto = ({menuAbierto, activeMenu}) => {
     });
       
    
+    
 
     return (
         <main id="primary" onClick={cerrarMenu}>
-            <Title seccion="Sujetos" Display="" />
+            <Title seccion="Sujetos" displayBtn={displayBtn} />
                 
             <section class="content">
                 <div class="content-div grid-col4">
