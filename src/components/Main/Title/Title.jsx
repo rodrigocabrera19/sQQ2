@@ -3,7 +3,7 @@ import './title.css';
 import Rombo from '../Rombo/Rombo'
 import Search from '../Search/Search'
 
-const Title = ({seccion, displayBtn, verificarSeleccionados}) => {
+const Title = ({seccion, displayBtn, deseleccionar, eliminarSeleccionados}) => {
 
     useEffect(() => {
         const glitchTitle = document.querySelector('.title');
@@ -74,10 +74,10 @@ const Title = ({seccion, displayBtn, verificarSeleccionados}) => {
                     <h2 class="title">{seccion}</h2>
                 </div>
                 <div className="btn-actions" style={{display:setDisplayBtn.length === 0 ? displayBtn : setDisplayBtn}}>
-                    <button class="prev-btn reset-form btn-cancelar">CANCELAR</button>
-                    <button class="prev-btn reset-form btn-delete">ELIMINAR SELECCIONADOS</button>
+                    <button class="prev-btn reset-form btn-cancelar" onClick={deseleccionar}>CANCELAR</button>
+                    <button class="prev-btn reset-form btn-delete" onClick={eliminarSeleccionados}>ELIMINAR SELECCIONADOS</button>
                 </div>
-                <Search setingDisplay={setingDisplay} />
+                <Search setingDisplay={setingDisplay} deseleccionar={deseleccionar}/>
                 
             </div>
             

@@ -3,7 +3,7 @@ import './search.css';
 
 
 
-const Search = ({menuAbierto, activeMenu, setingDisplay, verificarSeleccionados}) => {
+const Search = ({menuAbierto, activeMenu, setingDisplay, deseleccionar}) => {
 
 //Función que despliega el input del buscador.
     const animateSearch = () => {
@@ -16,8 +16,8 @@ const Search = ({menuAbierto, activeMenu, setingDisplay, verificarSeleccionados}
         const deleteIcon =document.querySelector('.deleteIcon');
         deleteIcon.classList.toggle('deleteIcon2');
         añadirIcon.classList.toggle('añadirIcon2');
-
         setingDisplay('none');
+        deseleccionar();
     }
 
      const cerrarMenu = () => {

@@ -193,14 +193,15 @@ tipoInstrumento.forEach( (tInst)=>{
 
 });
 
-const itemReport = document.querySelectorAll('.item-report');
+    const itemReport = document.querySelectorAll('.item-report');
 
-itemReport.forEach((item) =>{
-  item.addEventListener('click', function(e){
-    item.classList.toggle('selected-item');
-  });
-});
-    }, [])
+        itemReport.forEach((item) =>{
+            item.addEventListener('click', function(e){
+                item.classList.toggle('selected-item');
+            });
+        });
+        
+}, [])
 
 
 const [checking, setChecking] = useState()

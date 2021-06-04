@@ -44,36 +44,64 @@ const Sujeto = ({menuAbierto, activeMenu}) => {
     const eliminarSujeto = (value) => {
         const newArray = sujetos.filter(sujeto => sujeto !== value);
         setSujetos(newArray);
-        const ArraySujetos = document.querySelectorAll('.item')
-        const newArraySujetos = [...ArraySujetos]
+        
+        const arraySujetos = document.querySelectorAll('.item')
+        const newArraySujetos = [...arraySujetos]
         setDisplayBtn(newArraySujetos.some((e) => e.classList.contains('item-sujeto')) ? '' : 'none')
         
+        if(newArraySujetos.some((e) => e.classList.contains('item-sujeto'))) {
+            newArraySujetos.map(item => item.classList.remove('item-sujeto'));
+            setDisplayBtn('none')
+        }
     };
     
     
     const [displayBtn, setDisplayBtn] = useState('none')
 
     const sujeteSelected = (value) => {
-        if(value !== null){
-            const itemSujeto = document.getElementById(value);
-            if(itemSujeto.classList.contains('item-sujeto')){
+        
+        const itemSujeto = document.getElementById(value);
+        if(itemSujeto.classList.contains('item-sujeto')){
                 itemSujeto.classList.remove('item-sujeto');
             }else{
-                itemSujeto.classList.add('item-sujeto')
+                itemSujeto.classList.add('item-sujeto');
             }
             const sujetos = document.querySelectorAll('.item')
             const newArraySujetos = [...sujetos]
             setDisplayBtn(newArraySujetos.some((e) => e.classList.contains('item-sujeto')) ? '' : 'none')
-        }else{
-            return;
+        
+    }
+    
+    const deseleccionar = () => {
+        const arraySujetos = document.querySelectorAll('.item');
+        const newArraySujetos = [...arraySujetos];
+        if(newArraySujetos.some((e) => e.classList.contains('item-sujeto'))) {
+            newArraySujetos.map(item => item.classList.remove('item-sujeto'));
+            setDisplayBtn('none');
+        }
+    } 
+
+    const eliminarSeleccionados = () => {
+        const arraySujetos = document.querySelectorAll('.item');
+        const newArraySujetos = [...arraySujetos];
+        const newArray = newArraySujetos.filter(sujeto => !sujeto.classList.contains('item-sujeto'));
+
+        setSujetos(newArray.map(value => value.id));
+        
+        if(newArraySujetos.some((e) => e.classList.contains('item-sujeto'))) {
+            newArraySujetos.map(item => item.classList.remove('item-sujeto'));
+            setDisplayBtn('none')
         }
     }
     
+   
+    
     const sujetosItems = sujetos.map((value)=> {
         return(
-            <div class="item" id={value} onClick={() => sujeteSelected(value)}>
-                    <div class="item-container">
-                            <img src={alucard} alt=""/>
+            <div class="item" id={value}>
+                <div class="item-container">
+                        <div onClick = {() => sujeteSelected(value)}>
+                            <img src={alucard} alt="" />
                             <h4 class="item-name">{value}</h4>
                             <div class="desc">
                                 <div>
@@ -85,27 +113,26 @@ const Sujeto = ({menuAbierto, activeMenu}) => {
                                 </div>
                                 
                             </div>
+                        </div>
                             <div class="btn-div">
                                 <a href="#" class="btn-simple">Editar</a>
                                 <button 
                                     class="btn-simple" 
                                     onClick={() => {
                                         eliminarSujeto(value);
-                                        sujeteSelected(null);
                                     }}
                                 >Eliminar</button>
                             </div>
                         </div>
-                </div>
+            </div>
         ) 
     });
       
    
-    
 
     return (
         <main id="primary" onClick={cerrarMenu}>
-            <Title seccion="Sujetos" displayBtn={displayBtn} />
+            <Title seccion="Sujetos" displayBtn={displayBtn} deseleccionar={deseleccionar} eliminarSeleccionados={eliminarSeleccionados}/>
                 
             <section class="content">
                 <div class="content-div grid-col4">
