@@ -13,11 +13,10 @@
 .title-box{
     position: relative;
 }
-.title{
+.title1{
     color: var(--color-bw);
     font-family: 'Mohave', sans-serif;
     font-weight: 300;
-    /* transform: translateX(50%); */
     opacity: 0;
     animation: glitch-text-1 infinite 10s ease-in 1s;
 }

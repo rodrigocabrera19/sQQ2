@@ -27,10 +27,12 @@
 
 .searchIcon, .añadirIcon, .deleteIcon{
     cursor: pointer;
+    align-self:center;
 
 }
-.searchIcon, .detetIcon, añadirIcon{
-    align-self:center;
+.searchIcon{
+    padding:0;
+    background-color:red;
 }
 
 
@@ -57,6 +59,8 @@
 .searchIcon{
     display:flex;
     align-items:center;
+    transform:rotate(180deg);
+    width:50rem;
 }
 
 

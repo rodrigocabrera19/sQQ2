@@ -6,7 +6,7 @@ import Search from '../Search/Search'
 const Title = ({seccion, displayBtn, deseleccionar, eliminarSeleccionados}) => {
 
     useEffect(() => {
-        const glitchTitle = document.querySelector('.title');
+        const glitchTitle = document.querySelector('.title1');
 
         function glitch(){
 
@@ -21,7 +21,7 @@ const Title = ({seccion, displayBtn, deseleccionar, eliminarSeleccionados}) => {
             
                 sectionTitle.insertBefore(titleBox, sectionTitle.childNodes[0]);
             
-                let titleOriginal = document.querySelector('.title');
+                let titleOriginal = document.querySelector('.title1');
                 titleBox.insertBefore(titleOriginal, titleBox.childNodes[0]);
             
                 let copyTitle = document.createElement("h2");
@@ -49,7 +49,7 @@ const Title = ({seccion, displayBtn, deseleccionar, eliminarSeleccionados}) => {
         
 
         setTimeout(function backToOrigin(){
-            let titleOriginal = document.querySelector('.title');
+            let titleOriginal = document.querySelector('.title1');
             titleOriginal.style.opacity = "1";
 
             document.querySelector('.glitch-title1').remove();
@@ -67,17 +67,17 @@ const Title = ({seccion, displayBtn, deseleccionar, eliminarSeleccionados}) => {
     }
 
     return (
-        <section class="title-section ">
+        <section class="title-section " style={{backgroundColor:"red"}}>
             <div class="divBox11 H-group V-group-media-title">
                 
                 <div class="divBox22 H-group">
-                    <h2 class="title">{seccion}</h2>
+                    <h2 class="title1">{seccion}</h2>
                 </div>
                 <div className="btn-actions" style={{display:setDisplayBtn.length === 0 ? displayBtn : setDisplayBtn}}>
                     <button class="prev-btn reset-form btn-cancelar" onClick={deseleccionar}>CANCELAR</button>
                     <button class="prev-btn reset-form btn-delete" onClick={eliminarSeleccionados}>ELIMINAR SELECCIONADOS</button>
                 </div>
-                <Search setingDisplay={setingDisplay} deseleccionar={deseleccionar}/>
+                <Search setingDisplay={setingDisplay} deseleccionar={deseleccionar} display={displayBtn}/>
                 
             </div>
             
