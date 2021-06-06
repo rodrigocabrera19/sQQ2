@@ -206,80 +206,33 @@ const Reporte = ({menuAbierto, activeMenu}) => {
         })
 
         });
-
-            const itemReport = document.querySelectorAll('.item-report');
-
-                itemReport.forEach((item) =>{
-                    item.addEventListener('click', function(e){
-                        item.classList.toggle('selected-item');
-                    });
-                });
-
-            itemReport.forEach((item)=>{
-
-        
-                let allTab = document.querySelector('.all-tab button');
-                let selectedTab = document.querySelector('.selected-tab button');
-                
-
-                allTab.addEventListener('click', function(){
-                    
-                    document.querySelector('.selected-tab').classList.remove('active-tab');
-                    document.querySelector('.all-tab').classList.add('active-tab');
-                    
-                    item.style.display = 'block';
-                    
-                    
-                });
-                
-                selectedTab.addEventListener('click', function(){
-                    
-                    document.querySelector('.selected-tab').classList.add('active-tab');
-                    document.querySelector('.all-tab').classList.remove('active-tab');
-
-                    if(selectedTab.classList.contains('active-tab') || item.classList.contains('selected-item')){
-                    item.style.display = 'block';
-                    } else {
-                    item.style.display = "none";
-                    }
-
-                });
-                
-
-            });
-        
     }, [])
 
+
+    
     return (
             <main id="primary" onClick={cerrarMenu}>
-                <Title seccion="Reporte" displayBtn="none"/>
-                
 
-                <section class="content">
+                <section class="content-report">
 
-                    
+                    <div class="content-div-report">
 
-                        <div class="content-div">
+                        <FormBreadcrumb />
+                              
+                        <form class="div-form">
 
-                            <FormBreadcrumb />
-                                
+                            <Step1 />
 
+                            <Step2 />
 
+                            <Step3 />
 
-                            <form class="div-form">
+                            <Step4 />
 
-                                <Step1 />
-
-                                <Step2 />
-
-                                <Step3 />
-
-                                <Step4 />
-
-                            </form>
+                        </form>
 
 
-                        </div>
+                    </div>
 
                 </section>
 

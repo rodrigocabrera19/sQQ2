@@ -1,16 +1,68 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import alucard from '../../../../image/alucard.jpg';
+import './style.css'
 
 const Step2 = () => {
+
+    useEffect(() => {
+        const itemReport = document.querySelectorAll('.item-report');
+
+            itemReport.forEach((item) =>{
+                item.addEventListener('click', function(e){
+                    item.classList.toggle('selected-item');
+                    item.classList.toggle('selected');
+                });
+            });
+
+
+            itemReport.forEach((item)=>{
+                let allTab = document.querySelector('.all-tab button');
+                let selectedTab = document.querySelector('.selected-tab button');
+                
+
+                allTab.addEventListener('click', function(e){
+                    e.preventDefault();
+                    document.querySelector('.selected-tab').classList.remove('active-tab');
+                    document.querySelector('.all-tab').classList.add('active-tab');
+                    document.querySelectorAll('.selected')
+                        .forEach((selected) => {
+                            selected.classList.add('selected-item');
+                        })
+                    item.style.display = 'block';
+                    
+                    
+                });
+                
+                selectedTab.addEventListener('click', function(e){
+                    e.preventDefault();
+                    
+                    document.querySelector('.selected-tab').classList.add('active-tab');
+                    document.querySelector('.all-tab').classList.remove('active-tab');
+                    
+                    if(item.classList.contains('selected-item') || item.classList.contains('selected')){
+                        item.style.display = 'block';
+                        document.querySelectorAll('.selected')
+                        .forEach((selected) => selected.classList.remove('selected-item'));
+                        
+                    } else {
+                        item.style.display = "none";
+                    }
+
+                });
+                
+
+            });
+    }, [])
+
 
     //Estado que guarda true o false según si el usuario seleccionó o no una carta. El mismo sirve para permitir el acceso o no a la sección 'selecionado'.
     const [selectedActive, setSelectedActive] = useState(null);
     //Función para verificar si el usuario seleccionó una carta en la sección 'choose' .De ser así, se le permite acceder al apartado 'seleccionado'.
     const selected = () => {
         const itemReport = document.querySelectorAll('.item-report');
-        const item = [...itemReport];
+        const items = [...itemReport];
+        setSelectedActive(items.some(value => value.classList.contains('selected-item')))  
 
-        setSelectedActive(item.some(value => value.classList.contains('selected-item')))  
     }
 
     return (
@@ -21,22 +73,22 @@ const Step2 = () => {
             <div class="filter">
             </div>
 
-            <div class="filter-tabs H-group">
+            <div class="filter-tabs H-group" >
 
-                <div class="tabs H-group">
+                <div class="tabs H-group" >
                     <div class="tab all-tab active-tab">
-                        <button type="button">
+                        <button>
                             Todo
                         </button>
                     </div>
                     <div class="tab selected-tab">
                         {
                             selectedActive ? 
-                                <button type="button">
+                                <button>
                                     Seleccionado
                                 </button> 
                                 :
-                                <button type="button" disabled>
+                                <button disabled>
                                     Seleccionado
                                 </button>
                         }
@@ -48,149 +100,95 @@ const Step2 = () => {
                 <div class="filter-container grid-col6">
                                                 
 
-                    <div class="item-report" >
-                        <div class="item-container" onClick={selected}>
+                    <div class="item-report" onClick={selected}>
+                        <div class="item-container-report" >
                             <img src={alucard} alt=""/>
-                            <div class="H-group">
-                                <h4 class="item-name">CSDVR1</h4>
+                            <div class="item-desc-report">
+                                <div class="H-group">
+                                    <h4 class="item-name-report">CSDVR1</h4>
+                                </div>
+                                <div class="item-rombo">
+                                    
+                                </div>
                             </div>
                         </div>
 
 
-                        <div class="desc-item-report">
-
-                            <div class="H-group">
-                                <h5>Tipo de activo</h5>
-                                <p class="tipo de activo"></p>
-                            </div>
-                            <div class="H-group">
-                                <h5>
-                                    Medidas
-                                </h5>
-                                <p>
-                                    <span class="height">height</span> x <span class="width">width</span>
-                                </p>
-                            </div>
-                            <div class="H-group">
-                                <h5>
-                                    Peso
-                                </h5>
-                                <p>
-                                    <span class="weight">height</span> kb
-                                </p>
-                            </div>
-                            <div class="valor">
-                                <h5>Precio</h5>
-                                <p class="price"></p>
-                            </div>
-
-                        </div>
+                        
                     </div>
                                                     
                     <div class="item-report" onClick={selected}>
-                        <div class="item-container">
+                        <div class="item-container-report">
                             <img src={alucard} alt=""/>
-                            <h4 class="item-name">CSDVR2</h4>
+                            <div class="item-desc-report">
+                                <div class="H-group">
+                                    <h4 class="item-name-report">CSDVR2</h4>
+                                </div>
+                                <div class="item-rombo">
+                                    
+                                </div>
+                            </div>
                         </div>
 
-                        <div class="desc-item-report">
+                    </div>
 
-                            <div class="H-group">
-                                <h5>Tipo de activo</h5>
-                                <p class="tipo de activo"></p>
+                    <div class="item-report" onClick={selected}>
+                        <div class="item-container-report" onClick={selected}>
+                            <img src={alucard} alt=""/>
+                            <div class="item-desc-report">
+                                <div class="H-group">
+                                    <h4 class="item-name-report">CSDVR3</h4>
+                                </div>
+                                <div class="item-rombo">
+                                    
+                                </div>
                             </div>
-                            <div class="H-group">
-                                <h5>
-                                    Medidas
-                                </h5>
-                                <p>
-                                    <span class="height">height</span> x <span class="width">width</span>
-                                </p>
-                            </div>
-                            <div class="H-group">
-                                <h5>
-                                    Peso
-                                </h5>
-                                <p>
-                                    <span class="weight">height</span> kb
-                                </p>
-                            </div>
-                            <div class="valor">
-                                <h5>Precio</h5>
-                                <p class="price"></p>
-                            </div>
-
                         </div>
                     </div>
 
                     <div class="item-report" onClick={selected}>
-                        <div class="item-container">
+                        <div class="item-container-report" onClick={selected}>
                             <img src={alucard} alt=""/>
-                            <h4 class="item-name">CSDVR3</h4>
-                        </div>
-
-                        <div class="desc-item-report">
-
-                            <div class="H-group">
-                                <h5>Tipo de activo</h5>
-                                <p class="tipo de activo"></p>
+                            <div class="item-desc-report">
+                                <div class="H-group">
+                                    <h4 class="item-name-report">CSDVR4</h4>
+                                </div>
+                                <div class="item-rombo">
+                                    
+                                </div>
                             </div>
-                            <div class="H-group">
-                                <h5>
-                                    Medidas
-                                </h5>
-                                <p>
-                                    <span class="height">height</span> x <span class="width">width</span>
-                                </p>
+                        </div>
+                    </div>
+                    
+                    <div class="item-report" onClick={selected}>
+                        <div class="item-container-report" onClick={selected}>
+                            <img src={alucard} alt=""/>
+                            <div class="item-desc-report">
+                                <div class="H-group">
+                                    <h4 class="item-name-report">CSDVR5</h4>
+                                </div>
+                                <div class="item-rombo">
+                                    
+                                </div>
                             </div>
-                            <div class="H-group">
-                                <h5>
-                                    Peso
-                                </h5>
-                                <p>
-                                    <span class="weight">height</span> kb
-                                </p>
+                        </div>
+                    </div>
+                    
+                    <div class="item-report" onClick={selected}>
+                        <div class="item-container-report" onClick={selected}>
+                            <img src={alucard} alt=""/>
+                            <div class="item-desc-report">
+                                <div class="H-group">
+                                    <h4 class="item-name-report">CSDVR6</h4>
+                                </div>
+                                <div class="item-rombo">
+                                    
+                                </div>
                             </div>
-                            <div class="valor">
-                                <h5>Precio</h5>
-                                <p class="price"></p>
-                            </div>
-
                         </div>
                     </div>
-
-                    <div class="item-report" onClick={selected}>
-                        <div class="item-container">
-                            <img src={alucard} alt=""/>
-                            <h4 class="item-name">CSDVR4</h4>
-                        </div>
-                    </div>
-                    <div class="item-report" onClick={selected}>
-                        <div class="item-container">
-                            <img src={alucard} alt=""/>
-                            <h4 class="item-name">CSDVR4</h4>
-                        </div>
-                    </div>
-                    <div class="item-report" onClick={selected}>
-                        <div class="item-container">
-                            <img src={alucard} alt=""/>
-                            <h4 class="item-name">CSDVR4</h4>
-                        </div>
-                    </div>
-                    <div class="item-report" onClick={selected}>
-                        <div class="item-container">
-                            <img src={alucard} alt=""/>
-                            <h4 class="item-name">CSDVR4</h4>
-                        </div>
-                    </div>
-                    <div class="item-report" onClick={selected}>
-                        <div class="item-container">
-                            <img src={alucard} alt=""/>
-                            <h4 class="item-name">CSDVR4</h4>
-                        </div>
-                    </div>
-
-
+                   
+                    
                 </div>
             </div>
 
@@ -199,9 +197,9 @@ const Step2 = () => {
 
             <div class="button-div H-group">
 
-                                                    <button type="button" class="prev-btn btn prev-btn-step2">Anterior</button>
+                <button type="button" class="prev-btn btn prev-btn-step2">Anterior</button>
 
-                                                    <button type="submit" class="next-btn btn next-btn-step2">siguiente</button>
+                <button type="submit" class="next-btn btn next-btn-step2">siguiente</button>
 
             </div>
 

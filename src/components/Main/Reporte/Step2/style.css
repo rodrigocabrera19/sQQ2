@@ -1,0 +1,155 @@
+
+.filter-tabs{
+    margin-top: 5rem;
+    
+}
+
+
+.tab{
+    
+    display: block;
+    width:13rem;
+}
+
+
+
+.tab button{
+    background-color: transparent;
+    font-family: 'Rajdhani', sans-serif;
+    color: var(--turquoise);
+    text-transform: uppercase;
+    padding: 1.5rem 2rem ;
+    cursor: pointer;
+    padding-left:4rem;
+}
+.tab:nth-child(2){
+
+    width:16rem;
+}
+
+
+.active-tab{
+    opacity: 1;
+    box-shadow:25px 0 30px #121113cc inset,
+                -25px 0 30px #121113cc inset,
+                0 -20px 28px #CB0542 inset;
+}
+
+.active-tab button{
+    color: var(--turquoise);
+}
+
+.item-report{
+    margin: .5rem;
+    position: relative;
+    animation: blinkBorder 5s infinite;
+}
+
+
+
+.item-report:hover .item-container{
+    border: 1px solid var(--gray-color);
+}
+
+
+.desc-item-report-show{
+    opacity: 1 !important;
+    padding: 2rem !important;
+    width: 100% !important;
+}
+
+.desc-item-report{
+    margin: 2rem;
+    position: absolute;
+    top: 0;
+    left: 70%;
+    background-color: var(--dark-turquoise-transparent);
+    backdrop-filter: blur(1rem);
+    border: 1px solid var(--color-bw);
+    z-index: 5;
+    min-height: 50%;
+    box-shadow: 0 0 2px 4px var(--dark-turquoise-transparent),0 0 20px 5px var(--color-bg-transparent);
+    color: var(--color-bw);
+    opacity: 0;
+    width: 0;
+    overflow: hidden;
+}
+
+
+.filter-container{
+    border: 1px solid var(--turquoise-transparent);
+    padding: 5rem 3rem;
+    min-height: 50vh;
+    width: 100%;
+    border:none;
+    border-top:#CB0542 solid 2px;
+    padding:2.5rem;
+}
+
+
+.selected-item .item-container-report{
+    background-color:#0A0A0A;
+    border:1px solid #E7E7E7;
+}
+.selected .item-container-report .item-desc-report .item-rombo{
+    background-color:#E7E7E7;
+}
+
+.filter-container .item img{
+    padding: 0;
+}
+
+
+
+.item-container-report{
+    padding: .7rem;
+    background: var(--transparent3-bw);
+    border-radius: 1px;
+    border: 1px solid var(--transparent-bw);
+    transform: translateY(0);
+    opacity: 1;
+    transition: .4s;
+}
+
+.item-container-report img{
+    background-color: #090909;
+    padding: .2rem 1rem;
+    width:17rem;
+    min-height: 100%;
+    object-fit: cover;
+}
+
+.item-desc-report{
+    margin-top:.5rem;
+    display:flex;
+    align-content:center;
+    justify-content:space-between;
+    padding:0 .7rem 0 .2rem;
+}
+
+
+
+.item-name-report{
+    
+    align-self:center;
+    color: var(--yellow);
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    animation: shadowSize 2s ease-in infinite alternate-reverse;
+    font-size:2rem;
+}
+.item-rombo{
+    width:1rem;
+    height:1rem;
+    background-color:transparent;
+    transform:rotate(45deg);
+    align-self:center;
+    border: 1px solid #E7E7E7;
+}
+
+
+
+
+
+

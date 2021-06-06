@@ -32,7 +32,7 @@ const Search = ({menuAbierto, activeMenu, setingDisplay, deseleccionar, display}
     
    
     return (
-            <div class="searchbar H-group" onClick={cerrarMenu} style={{display:display}}>
+            <div class="searchbar H-group" onClick={cerrarMenu}>
                 
                 <div class="añadirIcon ">
                     <span className="search">
@@ -82,15 +82,15 @@ const Search = ({menuAbierto, activeMenu, setingDisplay, deseleccionar, display}
 
                 </div>
                 
+                
                 <input type="text" name="" id="search" class="searchinput"/>
+                <div class="searcIcon" onClick={animateSearch}>
                 
-                <div  onClick={animateSearch}>
-                
-                    <span>
-                        
-                       
-                    </span>
-                    
+                    <label for="search" class="btn-search">
+                        <div class="searcIcon">
+                            <span></span>
+                        </div>
+                    </label>
                 </div>
                 
 

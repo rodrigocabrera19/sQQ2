@@ -67,7 +67,7 @@ const Title = ({seccion, displayBtn, deseleccionar, eliminarSeleccionados}) => {
     }
 
     return (
-        <section class="title-section " style={{backgroundColor:"red"}}>
+        <section class="title-section">
             <div class="divBox11 H-group V-group-media-title">
                 
                 <div class="divBox22 H-group">
