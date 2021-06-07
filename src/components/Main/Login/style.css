@@ -1,0 +1,74 @@
+.login-container{
+    height:100vh;
+    display:grid;
+    grid-template-columns: 346px;
+    grid-template-rows: 1fr 2fr;
+    grid-row-gap: 6rem;
+    justify-content: center;
+    align-content: center;
+}
+
+.title-section{
+    width:346px;
+    text-align:center;
+    align-items: center;
+}
+hr{
+    width:103px;
+    margin:auto;
+    margin-top:.3rem;
+}
+
+.login-section{
+    height:219px;
+    width:346px;
+    display:grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 50% 20% 30%;
+}
+
+.login-form{
+    display:grid;
+    grid-template-rows: 20% 10%;
+    grid-template-columns: 100%;
+    grid-row-gap: 3rem;
+    width:100%;
+}
+
+input{
+    width:100%;
+
+}
+.login-remember{
+    display:flex;
+    justify-content:space-between;
+    padding:0 2rem 0 2rem;
+}
+.remember{
+    display:flex;
+}
+
+
+.rombo-remember{
+    width:1rem;
+    height:1rem;
+    transform:rotate(45deg);
+    border: 1px solid #E7E7E7;
+    margin:.5rem .6rem 0 0;
+    cursor:pointer;
+}
+
+.button-login{
+    display:flex;
+    justify-content:center;
+    margin-top:2rem;
+    height:4rem;
+}
+.button-login button{
+    cursor: pointer;
+    text-transform: uppercase;
+    color: var(--green);
+    border: 1px solid var(--green);
+    font-weight: 500;
+    width:12rem;
+}

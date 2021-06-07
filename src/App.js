@@ -8,6 +8,7 @@ import Sujeto from './components/Main/Sujeto/Sujeto'
 import AddSujetos from './components/Main/Sujeto/AddSujetos'
 import Reporte from './components/Main/Reporte/Reporte';
 import CertificadoForm from './components/Main/CertificadoForm/CertificadoForm';
+import Login from './components/Main/Login/Login';
 
 
 function App() {
@@ -22,7 +23,7 @@ function App() {
   return (
     <div className="App">
       <NavBar menuAbierto={menuAbierto} activeMenu={activeMenu}/>
-      <Sujeto menuAbierto={menuAbierto} activeMenu={activeMenu}/>
+      <Login menuAbierto={menuAbierto} activeMenu={activeMenu}/>
     </div>
   );
 }
