@@ -22,7 +22,6 @@ function App() {
   
   return (
     <div className="App">
-      <NavBar menuAbierto={menuAbierto} activeMenu={activeMenu}/>
       <Login menuAbierto={menuAbierto} activeMenu={activeMenu}/>
     </div>
   );

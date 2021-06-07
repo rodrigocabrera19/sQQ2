@@ -13,13 +13,22 @@
     text-align:center;
     align-items: center;
 }
+
+.title-login{
+    text-shadow:0 0 5px rgba(255, 255, 255, 0.55);
+    color:rgba(255, 255, 255, 0.55);
+    font-family:Roboto regular interletrado;
+    
+}
+
 hr{
     width:103px;
     margin:auto;
     margin-top:.3rem;
+    box-shadow:0 0 5px rgba(255, 255, 255, 0.55);
 }
 
-.login-section{
+.login-form{
     height:219px;
     width:346px;
     display:grid;
@@ -27,7 +36,7 @@ hr{
     grid-template-rows: 50% 20% 30%;
 }
 
-.login-form{
+.input-section{
     display:grid;
     grid-template-rows: 20% 10%;
     grid-template-columns: 100%;
@@ -37,12 +46,27 @@ hr{
 
 input{
     width:100%;
+    border: 1px solid white;
+    background: rgba(255, 255, 255, 0.05);
+    font-family: RAJDHANI FONT MEDIUM UPPERCASE;
+    color:#B2B2B2;
 
+}
+.show{
+    position: absolute;
+    top: 56.4%;
+    right: 34.5%;
+    font-family:RAJDHANI SEMIBOLD;
+    color:#5DF6FE;
+    font-size:10px;
+    cursor:pointer;
 }
 .login-remember{
     display:flex;
     justify-content:space-between;
-    padding:0 2rem 0 2rem;
+    padding:0 1rem 0 1rem;
+    font-family:Rajdhani medium;
+    color: #FFF;
 }
 .remember{
     display:flex;
@@ -53,9 +77,13 @@ input{
     width:1rem;
     height:1rem;
     transform:rotate(45deg);
-    border: 1px solid #E7E7E7;
-    margin:.5rem .6rem 0 0;
+    border: 1px solid white;
+    margin:.3rem .6rem 0 0;
     cursor:pointer;
+    
+}
+.background-rombo{
+    background: #FF003D;
 }
 
 .button-login{
@@ -71,4 +99,12 @@ input{
     border: 1px solid var(--green);
     font-weight: 500;
     width:12rem;
+}
+.button-login button:hover{
+    background-color:#FFF;
+    color:black;
+}
+
+#forgot-password{
+    color: #FFF;
 }
