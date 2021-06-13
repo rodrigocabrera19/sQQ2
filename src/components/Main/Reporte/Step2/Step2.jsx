@@ -80,8 +80,6 @@ const Step2 = () => {
 
             <h4 class="form-title">Choose Pieces</h4>
 
-            <div class="filter">
-            </div>
 
             <div class="filter-tabs H-group" >
 

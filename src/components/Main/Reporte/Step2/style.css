@@ -1,38 +1,50 @@
 
 .filter-tabs{
     margin-top: 5rem;
-    
 }
-
-
 .tab{
-    
     display: block;
-    width:13rem;
+    /* border: 1px solid var(--turquoise-transparent2);
+    background-color: var(--turquoise-transparent); */
+    border-bottom: none;
+    opacity: .4;
+    margin-bottom: 0;
 }
-
-
 
 .tab button{
-    background-color: transparent;
     font-family: 'Rajdhani', sans-serif;
-    color: var(--turquoise);
+    color: white;
     text-transform: uppercase;
-    padding: 1.5rem 2rem ;
+    padding: 0 5rem 1.6rem;
     cursor: pointer;
-    padding-left:4rem;
+    letter-spacing: 1px;
 }
+
 .tab:nth-child(2){
 
     width:16rem;
 }
 
-
 .active-tab{
     opacity: 1;
-    box-shadow:25px 0 30px #121113cc inset,
-                -25px 0 30px #121113cc inset,
-                0 -20px 28px #CB0542 inset;
+    /* border: 1px solid var(--turquoise-transparent2);
+    background-color: var(--turquoise-transparent); */
+    border-bottom: none;
+    position: relative;
+}
+
+.active-tab::after{
+    height: 60px;
+    width: 60px;
+    position: absolute;
+    border-radius: 100%;
+    content: "";
+    display: block;
+    z-index: -2;
+    background-color: #CB0542;
+    filter: blur(25px);
+    left: 50%;
+    transform: translate(-50%);
 }
 
 .active-tab button{
@@ -76,14 +88,13 @@
 }
 
 
-.filter-container{
-    border: 1px solid var(--turquoise-transparent);
+.filter-container{   
+    background-color: #0a0a0a;
+    border-top: 1px solid #CB0542;
+    /* border: 1px solid var(--turquoise-transparent); */
     padding: 5rem 3rem;
     min-height: 50vh;
     width: 100%;
-    border:none;
-    border-top:#CB0542 solid 2px;
-    padding:2.5rem;
 }
 
 

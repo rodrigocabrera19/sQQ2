@@ -1,17 +1,30 @@
+#primary{
+    width: 85%;
+    margin: auto;
+    background-color: var(--primary-bg-color);
+    padding-top: 12%;
+}
+
 .content-report{
     opacity: 0;
     /* background-color: var(--color4);    */
     /* background-color: var(--color3);    */
     animation: fadeIn .3s ease-in forwards;
     animation-delay: .5s;
+    width:100%;
 }
-
 
 
 .content-div-report{
     margin: 5% auto;
-    width: 90%;
+    width:100%;
     padding: 3% 0;
+}
+
+.div-form-report{
+    margin: 6rem 0 3rem 0;
+    padding-bottom: 6rem;
+    position: relative;
 }
 
 .prev-btn{

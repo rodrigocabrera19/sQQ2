@@ -219,7 +219,7 @@ const Reporte = ({menuAbierto, activeMenu}) => {
 
                         <FormBreadcrumb />
                               
-                        <form class="div-form">
+                        <form class="div-form-report">
 
                             <Step1 />
 
