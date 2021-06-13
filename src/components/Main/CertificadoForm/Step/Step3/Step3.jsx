@@ -19,7 +19,7 @@ const Step3 = ({updateData}) => {
                 },
             
         }
-    ])
+    ]);
     
     //función que guarda los datos del creador de la pieza en el estado 'creatorData'
     const handleCreador = (e) => {
@@ -37,13 +37,12 @@ const Step3 = ({updateData}) => {
                     "apellido":e.target.id === 'dueñoAp' ? e.target.value : creatorData[0].dueño.apellido
                 }
         }]
-        setCreatorData(newData)
-        
+        setCreatorData(newData);
     }
 
     //Función que se activa cuando el usuario presiona siguiente y envía la información registrada en el estado 'creatorData' al componente padre 'certificadoForm'.
     const sendCreador = () => {
-        updateData(creatorData)
+        updateData(creatorData);
     }
 
     return (

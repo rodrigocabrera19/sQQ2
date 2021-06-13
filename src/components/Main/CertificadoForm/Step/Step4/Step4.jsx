@@ -64,7 +64,8 @@ const Step4 = ({creatorData, valor, referenciaPieza, image}) => {
                             </div>
                         </article>
         )
-    })
+    });
+
     //Función que mapea la información del 'referenciaPieza' y la muestra en pantalla.
     const valorPieza = valor?.map(value =>{
         return(
@@ -87,7 +88,8 @@ const Step4 = ({creatorData, valor, referenciaPieza, image}) => {
                 </section>
             </div>
         )
-    })
+    });
+
     //Función que mapea la información del 'valor' y la muestra en pantalla.
     const datosCreador = creatorData?.map(value =>{
         return(
@@ -108,7 +110,7 @@ const Step4 = ({creatorData, valor, referenciaPieza, image}) => {
                 </section>
             </div>
         )
-    })
+    });
     
 
     return (

@@ -8,14 +8,19 @@ import Step3 from './Step/Step3/Step3'
 import Step4 from './Step/Step4/Step4';
 
 const CertificadoForm = ({menuAbierto, activeMenu}) => {
-    const [image, setImage] = useState('')
-    const [referenciaPieza, setReferenciaPieza] = useState(null)
+    //Estado que guarda la imagen elegida en el componente hijo 'Ste1'.
+    const [image, setImage] = useState('');
 
-    const [valor, setValor] = useState(null)
+    //Estado que guarda la infromación recibida del componente hijo 'Ste1'.
+    const [referenciaPieza, setReferenciaPieza] = useState(null);
+    
+    //Estado que guarda la infromación recibida del componente hijo 'Step2'.
+    const [valor, setValor] = useState(null);
+
     //Estado que guarda la infromación recibida del componente hijo 'Step3'.
-    const [creatorData, setCreatorData] = useState(null)
+    const [creatorData, setCreatorData] = useState(null);
 
-    //Función que actualiza la información de los estados 'referenciaPieza, valor, creatorData' que vienen del 'Step1, Step2, Step3' respectivamente. 
+    //Función que actualiza la información de los estados 'referenciaPieza, imagen, valor y creatorData' que vienen del 'Step1, Step2, Step3' respectivamente. 
     const updateData = (data, image) => {
         if(data.length) {
             if(data[0].id === "creator"){
@@ -140,7 +145,7 @@ const CertificadoForm = ({menuAbierto, activeMenu}) => {
         <Fragment>
             <main id="primary" onClick={cerrarMenu}>
                 
-                        <Title seccion="Certificado" display="none"/>
+                        
                         <FormBreadcrumb/>
                         <form class="div-form">
                             {/*Se le pasa la función updateData al componente 'Step1' para que envíe la información sobre referencia de la pieza ingresada en los inputs. */}

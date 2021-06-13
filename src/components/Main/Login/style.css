@@ -8,7 +8,7 @@
     align-content: center;
 }
 
-.title-section{
+.section-title{
     width:346px;
     text-align:center;
     align-items: center;
@@ -44,7 +44,7 @@ hr{
     width:100%;
 }
 
-input{
+.input-login{
     width:100%;
     border: 1px solid white;
     background: rgba(255, 255, 255, 0.05);

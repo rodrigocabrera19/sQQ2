@@ -32,9 +32,9 @@ const Reporte = ({menuAbierto, activeMenu}) => {
        }
     }
 
+    //FORM BOTONES + INPUTS
     useEffect(() => {
-        //FORM BOTONES + INPUTS 
-
+        
         const nxtBtn1 = document.querySelector('.next-btn-step1');
         const nxtBtn2 = document.querySelector('.next-btn-step2');
         const nxtBtn3 = document.querySelector('.next-btn-step3');

@@ -25,7 +25,6 @@ const Step2 = ({updateData}) => {
             
         ]
         setValor(newData)
-        
     }
 
     //Función que se activa cuando el usuario presiona siguiente y envía la información registrada en el estado 'valor' al componente padre 'certificadoForm'.

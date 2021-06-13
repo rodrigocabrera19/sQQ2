@@ -110,8 +110,6 @@ const AddSujetos = ({menuAbierto, activeMenu}) => {
         <Fragment>
             <main id="primary" onClick={cerrarMenu}>
 
-                <Title seccion="Sujetos" display="none"/>
-
                 <section class="content">
 
                     <h4 class="form-title2">AÑADIR NUEVO SUJETO</h4>

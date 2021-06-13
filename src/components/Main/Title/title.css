@@ -3,22 +3,46 @@
     margin: auto;
 }
 
+.divBox11{
+    display:flex;
+    justify-content: space-between;
+    align-content: center;
+    
+}
+
+.divBox22{
+    display:flex;
+    align-content: center;
+    
+}
+
+
+.form .divBox11{
+    justify-content: center;
+}
+
 
 .title-section .divBox22{
     justify-content: flex-start;
-    width:100%;
     
+}
+
+.title-section .divBox2{
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .title-box{
     position: relative;
 }
+
 .title1{
     color: var(--color-bw);
     font-family: 'Mohave', sans-serif;
     font-weight: 300;
     opacity: 0;
     animation: glitch-text-1 infinite 10s ease-in 1s;
+    text-align: center;
 }
 
 .glitch-title{
@@ -51,11 +75,13 @@
 }
 
 
-.subtitle{
-    color: var(--required-color);
-    font-weight: 300;
-    margin-top: 1rem;
+
+
+.form .title-section .searchbar, .form .add-button{
+    display: none;
 }
+
+
 
 .form .subtitle{
     display: none;

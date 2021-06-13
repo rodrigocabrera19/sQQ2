@@ -23,17 +23,17 @@ const Login = () => {
 
     return (
         <div className="login-container">
-            <section className="title-section">
+            <section className="section-title">
                 <h2 className="title-login">CHRISLUGICA</h2>
                 <hr />
             </section>
             <form className="login-form">
                 <section className="input-section">
                     <label For="username">
-                        <input type='text' placeholder="USERNAME"/>
+                        <input type='text' className="input-login" placeholder="USERNAME"/>
                     </label>
                     <label For="password">
-                        <input type={type} placeholder="PASSWORD" value={password} onChange={handlePassword}/>
+                        <input type={type} className="input-login" placeholder="PASSWORD" value={password} onChange={handlePassword}/>
                         <p className="show" onClick={handleShow}>SHOW</p>
                     </label>
                 </section>

@@ -1,8 +1,11 @@
 import React, {useEffect, Fragment, useState} from 'react';
 import './style.css'
 const Step1 = ({updateData}) => {
-    const [alertPlaceHolder, setAlertPlaceHolder] = useState(null)
-    const [image, setImage] = useState('')
+    //Estado que guarda el mensaje de alerta que se mostrará si el usuario escribe un numero mayor a 499 en el input 'Reflejo'.
+    const [alertMsg, setAlertMsg] = useState(null);
+
+    //Estado que gusrda la imagen elegida. 
+    const [image, setImage] = useState('');
 
     //Estado en forma de array, con un objeto dentro que guardará la referencia de la pieza  que el usuario ingrese.
     const [referenciaPieza, setReferenciaPieza] = useState([
@@ -25,13 +28,13 @@ const Step1 = ({updateData}) => {
         }
     ])
 
-    //función que guarda la referencia de la pieza en el estado 'referenciaPieza'
+    //función que guarda la referencia de la pieza en el estado 'referenciaPieza'.
     const handleRef = (e) => {
         if(e.target.id === 'reflejo' && e.target.value > 499){
-            setAlertPlaceHolder('El número ingresado debe ser menor a 499');
+            setAlertMsg('El número ingresado debe ser menor a 499');
             referenciaPieza[0].reflejo = "";
         }else{
-            setAlertPlaceHolder(null);
+            setAlertMsg(null);
             const newData = [
                 
                 {
@@ -154,11 +157,9 @@ const Step1 = ({updateData}) => {
     
       }
     
-        }, [])
+    }, [])
 
 
-
-    
     return (
         <Fragment>
             <div class="step-from step1" >
@@ -223,7 +224,7 @@ const Step1 = ({updateData}) => {
                                         </div>
                                     </div>
                                         {
-                                            alertPlaceHolder !== null && <span className="span-alert" style={{backgroundColor:"#FFA700", position:"absolute", color:"white", padding:"5px"}}>{alertPlaceHolder}</span>
+                                            alertMsg !== null && <span className="span-alert" style={{backgroundColor:"#FFA700", position:"absolute", color:"white", padding:"5px"}}>{alertMsg}</span>
                                         }
                                 </div>
                             </div>
