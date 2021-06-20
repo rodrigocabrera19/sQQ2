@@ -3,18 +3,7 @@ import Search from '../Search/Search'
 import './addSujetos.css';
 import Title from '../Title/Title.jsx'
 
-const AddSujetos = ({menuAbierto, activeMenu}) => {
-
-//Función para cerrar el menú de navegación.
-    const cerrarMenu = () => {
-        if(menuAbierto){
-            const menuAdmin = document.querySelector('.admin-menu');
-            const burger = document.querySelector('.burger');
-            menuAdmin.classList.toggle('show-admin');
-            burger.classList.toggle('burger-close');
-            activeMenu(false)
-       }
-    }
+const AddSujetos = ({ cerrarMenu }) => {
 
 //DRAG AND DROP
     useEffect(() => {
@@ -108,7 +97,7 @@ const AddSujetos = ({menuAbierto, activeMenu}) => {
 
     return (
         <Fragment>
-            <main id="primary" onClick={cerrarMenu}>
+            <main id="primary" onClick={() => cerrarMenu(false)}>
 
                 <section class="content">
 

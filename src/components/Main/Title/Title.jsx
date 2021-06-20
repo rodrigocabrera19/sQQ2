@@ -1,27 +1,23 @@
 import React, {useEffect, useState} from 'react';
 import './title.css';
-import Rombo from '../Rombo/Rombo'
-import Search from '../Search/Search'
 
-const Title = ({seccion, displayBtn, deseleccionar, eliminarSeleccionados}) => {
+const Title = ({ seccion }) => {
 
     useEffect(() => {
-        const glitchTitle = document.querySelector('.title1');
+        const glitchTitle = document.querySelector('.title');
 
-        function glitch(){
-
-            setTimeout(
-                function glitchTitle1(){
+       
+            setTimeout(() => {
             
                 let titleBox = document.createElement('div');
                 titleBox.classList.add('title-box');
                 // document.querySelector('.title-section .divBox2').appendChild(titleBox);
             
-                let sectionTitle = document.querySelector('.title-section .divBox22');
+                let sectionTitle = document.querySelector('.title-section .divBox2');
             
                 sectionTitle.insertBefore(titleBox, sectionTitle.childNodes[0]);
             
-                let titleOriginal = document.querySelector('.title1');
+                let titleOriginal = document.querySelector('.title');
                 titleBox.insertBefore(titleOriginal, titleBox.childNodes[0]);
             
                 let copyTitle = document.createElement("h2");
@@ -44,45 +40,28 @@ const Title = ({seccion, displayBtn, deseleccionar, eliminarSeleccionados}) => {
                 document.querySelector('.title-box').appendChild(copyTitle3);
             }, 300);
 
-        }
-        glitch();
+        
         
 
         setTimeout(function backToOrigin(){
-            let titleOriginal = document.querySelector('.title1');
+            let titleOriginal = document.querySelector('.title');
             titleOriginal.style.opacity = "1";
 
             document.querySelector('.glitch-title1').remove();
             document.querySelector('.glitch-title2').remove();
             document.querySelector('.glitch-title3').remove();
-
-        
         }, 4000);
-    }, [])
 
-    const [setDisplayBtn, setSetDisplayBtn] = useState('');
-    const setingDisplay = (display) => {
-        setDisplayBtn === 'none' ? setSetDisplayBtn('') : setSetDisplayBtn(display); 
+    }, [])
         
-    }
 
     return (
-        <section class="title-section">
-            <div class="divBox11 H-group V-group-media-title">
+        
                 
-                <div class="divBox22 H-group">
-                    <h2 class="title1">{seccion}</h2>
-                </div>
-                <div className="btn-actions" style={{display:setDisplayBtn.length === 0 ? displayBtn : setDisplayBtn}}>
-                    <button class="prev-btn reset-form btn-cancelar" onClick={deseleccionar}>CANCELAR</button>
-                    <button class="prev-btn reset-form btn-delete" onClick={eliminarSeleccionados}>ELIMINAR SELECCIONADOS</button>
-                </div>
-                <Search setingDisplay={setingDisplay} deseleccionar={deseleccionar} display={displayBtn}/>
-                
-            </div>
-            
-
-        </section>
+        <div class="divBox2 H-group">
+            <h2 class="title" style={{opacity: "0"}}>{seccion}</h2>
+        </div>
+             
     )
 }
 

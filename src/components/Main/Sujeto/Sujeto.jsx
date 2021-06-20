@@ -1,32 +1,11 @@
 import React, {useState, useEffect, Fragment} from 'react';
 import './sujetos.css';
 import Title from '../Title/Title'
+import Search from '../Search/Search'
 
 import alucard from '../../../image/alucard.jpg';
 
-const Sujeto = ({menuAbierto, activeMenu}) => {
-
-    //Al presionar la tecla 'esc' cierrar el menú.
-    window.onkeydown = (e)=>{
-        if(e.keyCode === 27){
-            const menuAdmin = document.querySelector('.admin-menu');
-            const burger = document.querySelector('.burger');
-            menuAdmin.classList.remove('show-admin');
-            burger.classList.remove('burger-close');
-            activeMenu(false)
-        }
-      };
-    
-    //función para cerrar el menú al hacer click en cualquier parte del body.
-    const cerrarMenu = () => {
-        if(menuAbierto){
-            const menuAdmin = document.querySelector('.admin-menu');
-            const burger = document.querySelector('.burger');
-            menuAdmin.classList.toggle('show-admin');
-            burger.classList.toggle('burger-close');
-            activeMenu(false)
-       }
-    }
+const Sujeto = ({ cerrarMenu }) => {
 
     useEffect(() => {
         const sujeto = document.querySelectorAll('.item');
@@ -94,8 +73,6 @@ const Sujeto = ({menuAbierto, activeMenu}) => {
         }
     }
     
-   
-    
     const sujetosItems = sujetos.map((value)=> {
         return(
             <div class="item" id={value}>
@@ -128,12 +105,23 @@ const Sujeto = ({menuAbierto, activeMenu}) => {
         ) 
     });
       
-   
 
     return (
-        <main id="primary" onClick={cerrarMenu}>
-            <Title seccion="Sujetos" displayBtn={displayBtn} deseleccionar={deseleccionar} eliminarSeleccionados={eliminarSeleccionados}/>
-                
+        <main id="primary" onClick={() => cerrarMenu(false)}>
+            <section class="title-section">
+                <div class="divBox1 H-group V-group-media-title">
+                    <Title 
+                        seccion="Sujetos"
+                    />
+                    <div className="btn-actions" style={{display:displayBtn}}>
+                            <button class="prev-btn reset-form btn-cancelar" onClick={deseleccionar}>CANCELAR</button>
+                            <button class="prev-btn reset-form btn-delete" onClick={eliminarSeleccionados}>ELIMINAR SELECCIONADOS</button>
+                    </div>
+                    <Search 
+                        deseleccionar={deseleccionar}
+                    /> 
+                </div>
+            </section>   
             <section class="content">
                 <div class="content-div grid-col4">
                     {sujetosItems}                    

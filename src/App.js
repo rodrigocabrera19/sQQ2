@@ -15,20 +15,40 @@ function App() {
   //Estado que establece si el menú está abierto o no.
   const [menuAbierto, setMenuAbierto] = useState(false);
 
-  //función que actualiza el estado del menú. El estado del menú permite cerrarlo haciendo click en cualquier parte del body.
-  const activeMenu = (active) => {
-    setMenuAbierto(active)
+  //Al presionar la tecla 'esc' cierrar el menú.
+  window.onkeydown = (e)=>{
+    if(e.keyCode === 27){
+        const menuAdmin = document.querySelector('.admin-menu');
+        const burger = document.querySelector('.burger');
+        menuAdmin.classList.remove('show-admin');
+        burger.classList.remove('burger-close');
+        setMenuAbierto(false)
+    }
+  };
+
+  
+  //Función para cerrar el menú de navegación.
+  const cerrarMenu = (bool) => {
+    if(menuAbierto){
+      const menuAdmin = document.querySelector('.admin-menu');
+      const burger = document.querySelector('.burger');
+      menuAdmin.classList.toggle('show-admin');
+      burger.classList.toggle('burger-close');
+      setMenuAbierto(bool);
+    }else{
+      setMenuAbierto(bool);
+    }
   }
+  
   
   return (
     <div className="App">
       <NavBar 
-        menuAbierto={menuAbierto} 
-        activeMenu={activeMenu}
+        cerrarMenu={cerrarMenu}
+        menuAbierto={menuAbierto}
       />
       <Reporte 
-        menuAbierto={menuAbierto} 
-        activeMenu={activeMenu}
+        cerrarMenu={cerrarMenu}
       />
     </div>
   );

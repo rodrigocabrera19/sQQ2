@@ -1,13 +1,12 @@
 import React, {useState} from 'react';
 
-const Menu = ({menuAbierto, activeMenu}) => {
+const Menu = ({cerrarMenu, menuAbierto}) => {
     
     //función que desplega y esconde el menu.
     const desplegarMenu = () => {
-        activeMenu(!menuAbierto);
+        cerrarMenu(!menuAbierto);
         const burger = document.querySelector('.burger');
         const menuAdmin = document.querySelector('.admin-menu');
-        
         menuAdmin.classList.toggle('show-admin');
         burger.classList.toggle('burger-close');
 

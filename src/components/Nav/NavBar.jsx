@@ -4,14 +4,14 @@ import Menu from './Menu/Menu.jsx'
 import AdminMenu from './Menu/AdminMenu'
 
 
-const NavBar = ({menuAbierto, activeMenu}) => {
+const NavBar = ({menuAbierto, cerrarMenu}) => {
 
     
     return (
         <header>
             
             <nav >
-                <Menu menuAbierto={menuAbierto} activeMenu={activeMenu}/>
+                <Menu menuAbierto={menuAbierto} cerrarMenu={cerrarMenu}/>
 
                 <ul className="nav-links">
                     <li>

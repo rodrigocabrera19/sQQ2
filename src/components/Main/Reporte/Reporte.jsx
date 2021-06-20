@@ -8,29 +8,7 @@ import Step2 from './Step2/Step2';
 import Step3 from './Step3/Step3';
 import Step4 from './Step4/Step4';
 
-const Reporte = ({menuAbierto, activeMenu}) => {
-
-    //Al presionar la tecla 'esc' cierrar el menú.
-    window.onkeydown = (e)=>{
-        if(e.keyCode === 27){
-            const menuAdmin = document.querySelector('.admin-menu');
-            const burger = document.querySelector('.burger');
-            menuAdmin.classList.remove('show-admin');
-            burger.classList.remove('burger-close');
-            activeMenu(false)
-        }
-      };
-
-    //Función para cerrar el menú de navegación.
-    const cerrarMenu = () => {
-        if(menuAbierto){
-            const menuAdmin = document.querySelector('.admin-menu');
-            const burger = document.querySelector('.burger');
-            menuAdmin.classList.toggle('show-admin');
-            burger.classList.toggle('burger-close');
-            activeMenu(false)
-       }
-    }
+const Reporte = ({cerrarMenu}) => {
 
     //FORM BOTONES + INPUTS
     useEffect(() => {
@@ -211,9 +189,16 @@ const Reporte = ({menuAbierto, activeMenu}) => {
 
     
     return (
-            <main id="primary" onClick={cerrarMenu}>
+            <main id="primary" onClick={() => cerrarMenu(false)}>
 
                 <section class="content-report">
+                    <section class="title-section">
+                        <div class="divBox1 H-group V-group-media-title">
+                            <Title 
+                                seccion="Reporte"
+                            />
+                        </div>
+                    </section> 
 
                     <div class="content-div-report">
 

@@ -7,7 +7,7 @@ import Step2 from './Step/Step2/Step2'
 import Step3 from './Step/Step3/Step3'
 import Step4 from './Step/Step4/Step4';
 
-const CertificadoForm = ({menuAbierto, activeMenu}) => {
+const CertificadoForm = ({ cerrarMenu }) => {
     //Estado que guarda la imagen elegida en el componente hijo 'Ste1'.
     const [image, setImage] = useState('');
 
@@ -36,17 +36,7 @@ const CertificadoForm = ({menuAbierto, activeMenu}) => {
         
     }
 
-    //Función para cerrar el menú de navegación.
-    const cerrarMenu = () => {
-        if(menuAbierto){
-            const menuAdmin = document.querySelector('.admin-menu');
-            const burger = document.querySelector('.burger');
-            menuAdmin.classList.toggle('show-admin');
-            burger.classList.toggle('burger-close');
-            activeMenu(false)
-       }
-    }
-
+    
     useEffect(() => {
             //FORM BOTONES + INPUTS 
     
@@ -143,7 +133,7 @@ const CertificadoForm = ({menuAbierto, activeMenu}) => {
 
     return (
         <Fragment>
-            <main id="primary" onClick={cerrarMenu}>
+            <main id="primary" onClick={() => cerrarMenu(false)}>
                 
                         
                         <FormBreadcrumb/>
